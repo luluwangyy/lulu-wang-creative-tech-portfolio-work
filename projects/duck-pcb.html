@@ -25,13 +25,23 @@
     .pcb-bom { overflow-x: auto; }
     .pcb-bom table { width: 100%; border-collapse: collapse; text-align: left; }
     .pcb-bom th, .pcb-bom td { padding: 0.6rem; border-bottom: 1px solid var(--color-border); }
-    .pcb-process-media {
+    .pcb-process-row {
       display: grid;
-      place-items: center;
-      min-height: 10rem;
-      margin: 1rem 0;
-      border: 1px dashed currentColor;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: clamp(0.4rem, 2vw, 1rem);
+      margin: 1.5rem 0;
+    }
+    .pcb-process-row figure { margin: 0; }
+    .pcb-process-row video {
+      display: block;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      object-fit: contain;
+      background: var(--color-bg-alt);
       border-radius: 0.5rem;
+    }
+    .pcb-process-row figcaption {
+      margin-top: 0.5rem;
       color: var(--color-text-muted);
     }
   </style>
@@ -129,8 +139,20 @@
             <li>Secure the copper blank on the Carvey bed and mill the traces and outline. The build notes record a trace cut depth of roughly 0.11–0.15 mm.</li>
             <li>Clean up the edges, solder the components with the timer last, then power the board and check that the LED blinks.</li>
           </ol>
-          <figure class="pcb-process-media" id="milling-media"><figcaption>CNC milling footage · Coming soon</figcaption></figure>
-          <figure class="pcb-process-media" id="soldering-media"><figcaption>Hand soldering footage · Coming soon</figcaption></figure>
+          <div class="pcb-process-row">
+            <figure>
+              <video data-process-clip src="../assets/videos/duck-pcb/milling-1.mp4" autoplay muted loop playsinline controls aria-label="CNC milling · Part 1"></video>
+              <figcaption>CNC milling · Part 1</figcaption>
+            </figure>
+            <figure>
+              <video data-process-clip src="../assets/videos/duck-pcb/milling-2.mp4" autoplay muted loop playsinline controls aria-label="CNC milling · Part 2"></video>
+              <figcaption>CNC milling · Part 2</figcaption>
+            </figure>
+            <figure>
+              <video data-process-clip src="../assets/videos/duck-pcb/soldering.mp4" autoplay muted loop playsinline controls aria-label="Hand soldering"></video>
+              <figcaption>Hand soldering</figcaption>
+            </figure>
+          </div>
         </section>
         <section class="project-section" id="reflection">
           <h2>Lessons &amp; Improvements</h2>
@@ -167,5 +189,17 @@
 
   <script src="../js/main.js?v=media-autoplay-1"></script>
   <script src="../js/next-project.js" defer></script>
+  <script>
+    for (const clip of document.querySelectorAll('[data-process-clip]')) {
+      clip.addEventListener('pointerenter', (event) => {
+        if (event.pointerType === 'mouse') clip.muted = false;
+      });
+      clip.addEventListener('pointerleave', (event) => {
+        if (event.pointerType !== 'mouse') return;
+        clip.muted = true;
+        if (clip.paused) clip.play().catch(() => {});
+      });
+    }
+  </script>
 </body>
 </html>
