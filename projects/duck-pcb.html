@@ -14,18 +14,17 @@
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css?v=next-project-arrow">
   <style>
-    .pcb-hero { display: grid; gap: 1rem; }
-    .pcb-hero figure { margin: 0; min-width: 0; }
-    .pcb-hero iframe, .pcb-hero img {
+    .pcb-media { margin: 1.25rem 0; }
+    .pcb-media video, .pcb-media img {
       display: block;
-      width: 100%;
-      aspect-ratio: 4 / 3;
-      border: 0;
+      max-width: 100%;
+      max-height: 65vh;
       border-radius: 0.5rem;
-      background: var(--color-bg-alt);
-      object-fit: contain;
     }
-    .pcb-hero figcaption { padding: 0.65rem 0; }
+    .pcb-media figcaption { margin-top: 0.65rem; }
+    .pcb-bom { overflow-x: auto; }
+    .pcb-bom table { width: 100%; border-collapse: collapse; text-align: left; }
+    .pcb-bom th, .pcb-bom td { padding: 0.6rem; border-bottom: 1px solid var(--color-border); }
     .pcb-process-media {
       display: grid;
       place-items: center;
@@ -34,9 +33,6 @@
       border: 1px dashed currentColor;
       border-radius: 0.5rem;
       color: var(--color-text-muted);
-    }
-    @media (min-width: 720px) {
-      .pcb-hero { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -63,18 +59,13 @@
   </header>
 
   <main>
-    <div class="project-detail-visual pcb-hero" aria-label="Finished pendant and circuit board design">
-      <figure>
-        <iframe src="https://www.youtube-nocookie.com/embed/j25X1oKjr-Y" title="The Duck PCB pendant blinking in the final demo" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        <figcaption>Final pendant in action · <a href="https://youtu.be/j25X1oKjr-Y">Watch on YouTube</a> · <a href="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/final-outcome.gif">View animated demo</a></figcaption>
-      </figure>
-      <figure>
-        <a href="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/kicad-design-screenshot.png"><img src="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/kicad-design-screenshot.png" alt="KiCad layout showing copper traces and component pads inside the duck-shaped board outline"></a>
-        <figcaption>KiCad layout · The LED sits at the duck’s bill.</figcaption>
-      </figure>
+    <div class="project-detail-visual">
+      <div class="project-visual">
+        <img src="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/final-board-view.png" alt="Finished duck-shaped PCB pendant">
+      </div>
     </div>
     <section class="project-detail-hero">
-      <a href="../work.html" class="back-link">&larr; Back to Work</a>
+      <a href="../make.html" class="back-link">&larr; Back to Make</a>
       <h1>The Duck: Custom PCB Design &amp; Fabrication</h1>
       <p class="project-subtitle">A hand-fabricated PCB pendant that turns a blinking red LED into a duck’s quack.</p>
       <dl class="project-meta project-meta--horizontal" aria-label="Project details">
@@ -90,55 +81,71 @@
         <ul class="project-toc__list">
           <li><a class="project-toc__link" href="#overview">Overview</a></li>
           <li><a class="project-toc__link" href="#design">Circuit &amp; PCB Design</a></li>
-          <li><a class="project-toc__link" href="#fabrication">Milling &amp; Assembly</a></li>
-          <li><a class="project-toc__link" href="#stack">Technical Stack</a></li>
-          <li><a class="project-toc__link" href="#reflection">Reflection</a></li>
+          <li><a class="project-toc__link" href="#stack">Specifications &amp; BOM</a></li>
+          <li><a class="project-toc__link" href="#fabrication">Reproduction Steps</a></li>
+          <li><a class="project-toc__link" href="#reflection">Lessons &amp; Improvements</a></li>
         </ul>
       </nav>
       <article class="project-detail-body">
         <section class="project-section" id="overview">
           <h2>Overview</h2>
-          <p>In my Creative Embedded Systems class, I started with a kit of components and designed a printed circuit board from scratch. I drew the schematic and laid out the board, milled it from copper-clad stock, and soldered the components by hand.</p>
-          <p>I wanted the circuit itself to feel playful. I shaped the board like a duck and put the red LED at its bill, so each flash reads like a quack.</p>
+          <p>In Creative Embedded Systems, I used a component kit to design a PCB from scratch. I drew the schematic and board layout in KiCad, milled the board from copper-clad stock, and soldered the components by hand. The red LED sits at the duck’s bill, so each blink reads like a quack.</p>
+          <figure class="pcb-media">
+            <video autoplay muted loop playsinline controls preload="metadata" poster="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/final-board-view.png" src="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/final-outcome.mov" aria-label="Finished duck PCB pendant with its red LED blinking"></video>
+            <figcaption>Finished pendant powered by a coin cell. <a href="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/final-outcome.gif">View animated demo</a> · <a href="https://youtu.be/j25X1oKjr-Y">Watch on YouTube</a></figcaption>
+          </figure>
         </section>
         <section class="project-section" id="design">
           <h2>Circuit &amp; PCB Design</h2>
-          <p>I drew the duck’s outline in Illustrator and imported the SVG into KiCad’s <code>Edge.Cuts</code> layer. I placed the LED at the bill, moved the coin-cell holder to the back, and routed the copper traces with the limits of CNC milling in mind.</p>
-          <p>A TL555 timer runs in astable mode. The resistors and capacitor set the blink rate, and the timer’s output drives the red LED.</p>
-        </section>
-        <section class="project-section" id="fabrication">
-          <h2>Milling &amp; Assembly</h2>
-          <h3>CNC milling</h3>
-          <p>I exported Gerber and drill files from KiCad, converted the Gerber artwork to SVG for Easel, and milled the traces and outline on a Carvey CNC.</p>
-          <figure class="pcb-process-media" id="milling-media"><figcaption>CNC milling footage · Coming soon</figcaption></figure>
-          <h3>Hand soldering</h3>
-          <p>After milling, I cleaned up the board edges and soldered the components onto the PCB, leaving the TL555 until last. I powered the assembled board with a coin cell to check the blink.</p>
-          <figure class="pcb-process-media" id="soldering-media"><figcaption>Hand soldering footage · Coming soon</figcaption></figure>
+          <p>The TL555 runs as an astable oscillator. Two resistors and a capacitor set its timing, and pin 3 drives the red LED through a current-limiting resistor. The blink comes from the circuit itself.</p>
+          <p>I drew the duck outline in Illustrator, imported the SVG into KiCad’s <code>Edge.Cuts</code> layer, and aligned the LED with the bill. I put the coin-cell holder on the back and used traces wider than 0.3 mm as a milling guideline.</p>
+          <figure class="pcb-media">
+            <a href="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/kicad-design-screenshot.png"><img src="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/kicad-design-screenshot.png" loading="lazy" alt="KiCad board layout showing the duck outline, copper routes, and component pads"></a>
+            <figcaption>KiCad layout showing the board outline and component placement.</figcaption>
+          </figure>
         </section>
         <section class="project-section" id="stack">
-          <h2>Technical Stack</h2>
-          <ul>
-            <li><strong>Circuit:</strong> TL555 CMOS timer, resistors, a timing capacitor, red LED, and coin-cell power.</li>
-            <li><strong>Design:</strong> Adobe Illustrator for the board outline and KiCad for the schematic, placement, routing, and fabrication exports.</li>
-            <li><strong>Fabrication:</strong> Gerber and drill files, Gerber-to-SVG conversion, Easel, and Carvey CNC milling.</li>
-          </ul>
-          <p>The blink is generated by the timer circuit itself.</p>
+          <h2>Technical Specifications &amp; Bill of Materials</h2>
+          <p>Low-power CMOS 555 oscillator with coin-cell power and a single 5 mm red LED, fabricated on CNC-milled copper-clad stock. The design files include the KiCad schematic and board, Gerber layers, and plated and non-plated drill exports.</p>
+          <div class="pcb-bom">
+            <table>
+              <thead><tr><th scope="col">Component</th><th scope="col">Specification</th><th scope="col">Qty</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">U1</th><td>TL555 CMOS timer</td><td>1</td></tr>
+                <tr><th scope="row">LED1</th><td>5 mm red LED</td><td>1</td></tr>
+                <tr><th scope="row">R1, R2</th><td>Timing resistors, 1–100 kΩ design range</td><td>2</td></tr>
+                <tr><th scope="row">C1</th><td>10 µF timing capacitor</td><td>1</td></tr>
+                <tr><th scope="row">Battery holder</th><td>Rear-mounted CR2032-style SMT holder</td><td>1</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <section class="project-section" id="fabrication">
+          <h2>Reproduction Steps</h2>
+          <ol>
+            <li>Build the TL555 astable schematic in KiCad and wire the output to the LED through a current-limiting resistor.</li>
+            <li>Import the outline, place the LED at the bill and battery holder at the rear, then route the board.</li>
+            <li>Export Gerber and drill files from KiCad. Convert the Gerber artwork to SVG and import it into Easel.</li>
+            <li>Secure the copper blank on the Carvey bed and mill the traces and outline. The build notes record a trace cut depth of roughly 0.11–0.15 mm.</li>
+            <li>Clean up the edges, solder the components with the timer last, then power the board and check that the LED blinks.</li>
+          </ol>
+          <figure class="pcb-process-media" id="milling-media"><figcaption>CNC milling footage · Coming soon</figcaption></figure>
+          <figure class="pcb-process-media" id="soldering-media"><figcaption>Hand soldering footage · Coming soon</figcaption></figure>
         </section>
         <section class="project-section" id="reflection">
-          <h2>Reflection</h2>
-          <p>I placed a milling tab too close to the bill. Filing it off without flattening the small curves was harder than routing the outline on screen. On the next board, I’d put the tabs on the flatter back or bottom edge.</p>
+          <h2>Lessons &amp; Improvements</h2>
+          <p>I placed a milling tab near the bill. Removing it meant filing right against the smallest curves on the board. On the next revision, I’d move the tabs to the flatter back or bottom edge so I can remove them without reshaping the bill.</p>
           <div class="link-button-row">
-            <a class="link-button" href="https://app.notion.com/p/PCB-Design-and-Fabrication-3053158f0df780498474fec68f859eae">Read the fabrication journal ↗</a>
-            <a class="link-button" href="https://github.com/luluwangyy/creative-embedded-system-pcb">View KiCad and fabrication files ↗</a>
+            <a class="link-button" href="https://github.com/luluwangyy/creative-embedded-system-pcb">View KiCad and fabrication files on GitHub ↗</a>
           </div>
         </section>
       </article>
     </div>
 
     <nav class="related-projects next-project" aria-label="Next project">
-      <a href="sketchtrace.html" class="related-card next-project-link">
+      <a href="creative-destruction.html" class="related-card next-project-link">
         <div>
-          <span class="related-card-title">Flowcode</span>
+          <span class="related-card-title">Choreographing Response</span>
         </div>
         <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M12 5v14m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
