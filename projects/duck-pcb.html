@@ -14,6 +14,22 @@
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/style.css?v=next-project-arrow">
   <style>
+    .pcb-hero-collage {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 2px;
+      margin: 0;
+      overflow: hidden;
+      border-radius: 0.5rem;
+      background: var(--color-bg-alt);
+    }
+    .pcb-hero-collage img {
+      display: block;
+      width: 100%;
+      height: clamp(9rem, 32vw, 28rem);
+      object-fit: contain;
+    }
+    .pcb-hero-collage .pcb-hero-board { object-fit: cover; }
     .pcb-media { margin: 1.25rem 0; }
     .pcb-media video, .pcb-media img {
       display: block;
@@ -70,9 +86,10 @@
 
   <main>
     <div class="project-detail-visual">
-      <div class="project-visual">
-        <img src="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/final-board-view.png" alt="Finished duck-shaped PCB pendant">
-      </div>
+      <figure class="pcb-hero-collage" aria-label="The finished Duck PCB beside its KiCad layout">
+        <img class="pcb-hero-board" src="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/final-board-view.png" alt="Finished duck-shaped PCB pendant">
+        <img src="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/kicad-design-screenshot.png" alt="KiCad layout with the duck-shaped outline and copper traces">
+      </figure>
     </div>
     <section class="project-detail-hero">
       <a href="../make.html" class="back-link">&larr; Back to Make</a>
