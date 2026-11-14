@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c0f">
+  <title>The Duck: Custom PCB Design &amp; Fabrication — Yueyi Lulu Wang</title>
+  <meta name="description" content="A duck-shaped PCB pendant I designed in KiCad, milled from copper-clad stock, and soldered by hand.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Averia+Serif+Libre:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css?v=next-project-arrow">
+  <style>
+    .pcb-hero { display: grid; gap: 1rem; }
+    .pcb-hero figure { margin: 0; min-width: 0; }
+    .pcb-hero iframe, .pcb-hero img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      border: 0;
+      border-radius: 0.5rem;
+      background: var(--color-bg-alt);
+      object-fit: contain;
+    }
+    .pcb-hero figcaption { padding: 0.65rem 0; }
+    .pcb-process-media {
+      display: grid;
+      place-items: center;
+      min-height: 10rem;
+      margin: 1rem 0;
+      border: 1px dashed currentColor;
+      border-radius: 0.5rem;
+      color: var(--color-text-muted);
+    }
+    @media (min-width: 720px) {
+      .pcb-hero { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body class="make-project make-project--indexed">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="nav-morph">
+        <button type="button" class="nav-morph__trigger" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="nav-morph__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <nav class="segmented-control" aria-label="Primary" id="primary-nav">
+          <span class="segmented-control__pill" aria-hidden="true"></span>
+          <a href="../index.html" class="segmented-control__item">Home</a>
+          <a href="../make.html" class="segmented-control__item">Make</a>
+          <a href="../work.html" class="segmented-control__item">Work</a>
+          <a href="../play.html" class="segmented-control__item">Play</a>
+          <a href="../about.html" class="segmented-control__item">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="project-detail-visual pcb-hero" aria-label="Finished pendant and circuit board design">
+      <figure>
+        <iframe src="https://www.youtube-nocookie.com/embed/j25X1oKjr-Y" title="The Duck PCB pendant blinking in the final demo" allow="accelerometer; encrypted-media; picture-in-picture; fullscreen" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <figcaption>Final pendant in action · <a href="https://youtu.be/j25X1oKjr-Y">Watch on YouTube</a> · <a href="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/final-outcome.gif">View animated demo</a></figcaption>
+      </figure>
+      <figure>
+        <a href="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/kicad-design-screenshot.png"><img src="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/kicad-design-screenshot.png" alt="KiCad layout showing copper traces and component pads inside the duck-shaped board outline"></a>
+        <figcaption>KiCad layout · The LED sits at the duck’s bill.</figcaption>
+      </figure>
+    </div>
+    <section class="project-detail-hero">
+      <a href="../work.html" class="back-link">&larr; Back to Work</a>
+      <h1>The Duck: Custom PCB Design &amp; Fabrication</h1>
+      <p class="project-subtitle">A hand-fabricated PCB pendant that turns a blinking red LED into a duck’s quack.</p>
+      <dl class="project-meta project-meta--horizontal" aria-label="Project details">
+        <div><dt class="meta-label">Context</dt><dd class="meta-value">Creative Embedded Systems · Computer Science</dd></div>
+        <div><dt class="meta-label">Role</dt><dd class="meta-value">PCB Design &amp; Fabrication</dd></div>
+        <div><dt class="meta-label">Year</dt><dd class="meta-value">Spring 2026</dd></div>
+        <div><dt class="meta-label">Tools</dt><dd class="meta-value">KiCad · Adobe Illustrator · Carvey CNC · Easel</dd></div>
+      </dl>
+    </section>
+    <div class="project-detail-split">
+      <nav class="project-toc" aria-label="On this page">
+        <p class="project-toc__label">Contents</p>
+        <ul class="project-toc__list">
+          <li><a class="project-toc__link" href="#overview">Overview</a></li>
+          <li><a class="project-toc__link" href="#design">Circuit &amp; PCB Design</a></li>
+          <li><a class="project-toc__link" href="#fabrication">Milling &amp; Assembly</a></li>
+          <li><a class="project-toc__link" href="#stack">Technical Stack</a></li>
+          <li><a class="project-toc__link" href="#reflection">Reflection</a></li>
+        </ul>
+      </nav>
+      <article class="project-detail-body">
+        <section class="project-section" id="overview">
+          <h2>Overview</h2>
+          <p>In my Creative Embedded Systems class, I started with a kit of components and designed a printed circuit board from scratch. I drew the schematic and laid out the board, milled it from copper-clad stock, and soldered the components by hand.</p>
+          <p>I wanted the circuit itself to feel playful. I shaped the board like a duck and put the red LED at its bill, so each flash reads like a quack.</p>
+        </section>
+        <section class="project-section" id="design">
+          <h2>Circuit &amp; PCB Design</h2>
+          <p>I drew the duck’s outline in Illustrator and imported the SVG into KiCad’s <code>Edge.Cuts</code> layer. I placed the LED at the bill, moved the coin-cell holder to the back, and routed the copper traces with the limits of CNC milling in mind.</p>
+          <p>A TL555 timer runs in astable mode. The resistors and capacitor set the blink rate, and the timer’s output drives the red LED.</p>
+        </section>
+        <section class="project-section" id="fabrication">
+          <h2>Milling &amp; Assembly</h2>
+          <h3>CNC milling</h3>
+          <p>I exported Gerber and drill files from KiCad, converted the Gerber artwork to SVG for Easel, and milled the traces and outline on a Carvey CNC.</p>
+          <figure class="pcb-process-media" id="milling-media"><figcaption>CNC milling footage · Coming soon</figcaption></figure>
+          <h3>Hand soldering</h3>
+          <p>After milling, I cleaned up the board edges and soldered the components onto the PCB, leaving the TL555 until last. I powered the assembled board with a coin cell to check the blink.</p>
+          <figure class="pcb-process-media" id="soldering-media"><figcaption>Hand soldering footage · Coming soon</figcaption></figure>
+        </section>
+        <section class="project-section" id="stack">
+          <h2>Technical Stack</h2>
+          <ul>
+            <li><strong>Circuit:</strong> TL555 CMOS timer, resistors, a timing capacitor, red LED, and coin-cell power.</li>
+            <li><strong>Design:</strong> Adobe Illustrator for the board outline and KiCad for the schematic, placement, routing, and fabrication exports.</li>
+            <li><strong>Fabrication:</strong> Gerber and drill files, Gerber-to-SVG conversion, Easel, and Carvey CNC milling.</li>
+          </ul>
+          <p>The blink is generated by the timer circuit itself.</p>
+        </section>
+        <section class="project-section" id="reflection">
+          <h2>Reflection</h2>
+          <p>I placed a milling tab too close to the bill. Filing it off without flattening the small curves was harder than routing the outline on screen. On the next board, I’d put the tabs on the flatter back or bottom edge.</p>
+          <div class="link-button-row">
+            <a class="link-button" href="https://app.notion.com/p/PCB-Design-and-Fabrication-3053158f0df780498474fec68f859eae">Read the fabrication journal ↗</a>
+            <a class="link-button" href="https://github.com/luluwangyy/creative-embedded-system-pcb">View KiCad and fabrication files ↗</a>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <nav class="related-projects next-project" aria-label="Next project">
+      <a href="sketchtrace.html" class="related-card next-project-link">
+        <div>
+          <span class="related-card-title">Flowcode</span>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 5v14m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <p class="next-project-hint" hidden>Keep scrolling to continue</p>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Yueyi Lulu Wang</span>
+      <div class="footer-links">
+        <a href="mailto:lulu.yueyi.wang@gmail.com">Email</a>
+        <a href="https://github.com/luluwangyy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=media-autoplay-1"></script>
+  <script src="../js/next-project.js" defer></script>
+</body>
+</html>
