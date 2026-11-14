@@ -1849,7 +1849,7 @@ a:focus-visible, button:focus-visible {
   --color-text: #f4f2ed;
   --color-text-muted: #aeb2bb;
   --color-border: rgba(244, 242, 237, 0.18);
-  --color-emphasis: #f0a07b;
+  --color-emphasis: #c7d3c9;
   color-scheme: dark;
   color: var(--color-text);
   background: var(--color-bg);
@@ -1860,7 +1860,12 @@ a:focus-visible, button:focus-visible {
 .make-index *::selection,
 .make-project *::selection {
   color: #0b0c0f;
-  background: #f0a07b;
+  background: var(--color-emphasis);
+}
+
+.light-magic-overview strong {
+  color: var(--color-emphasis);
+  font-weight: 650;
 }
 
 .make-index .collection-hero--make .collection-hero__index,
@@ -4925,7 +4930,7 @@ html.nomi-fullscreen-lock body {
 .nomi-case {
   --case-ink: #243238;
   --case-accent: #147a82;
-  --case-highlight-2: #b86f2e;
+  --case-highlight-2: #876b62;
   --case-wash: #edf7f7;
 }
 
@@ -4997,8 +5002,8 @@ html.nomi-fullscreen-lock body {
   position: absolute;
   inset: -1px;
   border: 0.45rem solid transparent;
-  border-top-color: #d98970;
-  border-right-color: #d8b361;
+  border-top-color: #c3b1c2;
+  border-right-color: #cec0a9;
   border-bottom-color: #74a29d;
   border-left-color: #7f789e;
   border-radius: inherit;
@@ -5025,7 +5030,7 @@ html.nomi-fullscreen-lock body {
 
 .spira-star--one { top: 18%; left: 24%; }
 .spira-star--two { right: 18%; bottom: 24%; }
-.spira-star--three { right: 33%; top: 13%; color: #d98970; }
+.spira-star--three { right: 33%; top: 13%; color: #c3b1c2; }
 
 .spira-stack {
   margin-top: 2.5rem;
@@ -5203,7 +5208,7 @@ html.nomi-fullscreen-lock body {
   }
 
   .case-signal-list--visual span:nth-child(2):hover {
-    background: linear-gradient(110deg, #627844, #d8bd72, #a9623c, #748ca0, #627844);
+    background: linear-gradient(110deg, #627844, #d0c5ae, #a9623c, #748ca0, #627844);
     background-size: 300% 100%;
     color: #fff;
     animation: signal-color-shift 2.4s linear infinite;
