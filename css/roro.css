@@ -1,0 +1,351 @@
+/* RoRo case study. Shared navigation, layout and colors come from style.css. */
+.roro-project {
+  --color-emphasis: #c8c8c8;
+}
+
+.roro-project .project-toc__link.is-active {
+  border-color: #777;
+}
+
+.roro-project .project-detail-visual.roro-motion {
+  margin-block: 1rem 0;
+}
+
+.roro-motion .roro-embed {
+  background: #171717;
+}
+
+.roro-hero {
+  display: grid;
+  grid-template-columns: minmax(14rem, .68fr) minmax(0, 1.32fr);
+  align-items: center;
+  column-gap: clamp(1.5rem, 3.25vw, 3rem);
+  row-gap: 2.5rem;
+  padding-top: clamp(1.5rem, 5vw, 4rem);
+  padding-bottom: clamp(2.5rem, 6vw, 4.5rem);
+}
+
+.roro-hero .back-link {
+  margin-bottom: clamp(1.75rem, 4vw, 3rem);
+}
+
+.roro-project .roro-hero h1 {
+  font: 500 clamp(4.25rem, 9vw, 8rem)/.92 var(--font-display);
+  letter-spacing: -.085em;
+  margin-block: .6rem 1rem;
+}
+
+.roro-hero-copy > p {
+  max-width: 43ch;
+}
+
+.roro-hero-copy > p + p {
+  margin-top: .85rem;
+}
+
+.roro-hero-copy p a {
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: .23em;
+}
+
+.roro-figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.roro-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--color-bg-alt);
+}
+
+.roro-project #overview {
+  scroll-margin-top: 1rem;
+}
+
+.roro-project .roro-section {
+  margin-block: 0 clamp(3.5rem, 8vw, 6.5rem);
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.roro-project .roro-section h2 {
+  font-size: clamp(2rem, 4vw, 3.1rem);
+  font-weight: 500;
+  letter-spacing: -.047em;
+  margin: .55rem 0 .85rem;
+}
+
+.roro-copy {
+  max-width: 67ch;
+  margin-bottom: 1.5rem;
+}
+
+.roro-pair {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.8rem, 2vw, 1.5rem);
+}
+
+.roro-pair:not(.roro-brackets) img,
+.roro-hero-pictures img {
+  aspect-ratio: 1500 / 1040;
+  object-fit: cover;
+}
+
+.roro-brackets {
+  margin-bottom: 2rem;
+}
+
+.roro-project #build-timeline h3 {
+  font-size: 1.25rem;
+  font-weight: 550;
+  margin-bottom: .5rem;
+}
+
+.roro-hero-pictures {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(.5rem, 1.25vw, 1rem);
+  min-width: 0;
+}
+
+.roro-hero-pictures img {
+  aspect-ratio: 5 / 4;
+}
+
+.roro-render-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(.55rem, 1.5vw, 1rem);
+  margin-top: clamp(.55rem, 1.5vw, 1rem);
+}
+
+.roro-render-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.roro-exploded {
+  margin-top: 2rem;
+}
+
+.roro-exploded-stage {
+  position: relative;
+}
+
+.roro-pins {
+  position: absolute;
+  inset: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  pointer-events: none;
+}
+
+.roro-pins li {
+  position: absolute;
+  left: var(--x);
+  top: var(--y);
+  transform: translate(-50%, -50%);
+}
+
+.roro-pins li > span:first-child {
+  display: grid;
+  place-items: center;
+  width: clamp(1.06rem, 2.6vw, 1.65rem);
+  aspect-ratio: 1;
+  border: 1px solid white;
+  border-radius: 50%;
+  background: #242424;
+  color: white;
+  font-size: clamp(.64rem, 1.3vw, .8rem);
+  font-weight: 650;
+}
+
+.roro-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.roro-part-key {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: .45rem 1.4rem;
+  padding: .9rem 1rem .9rem 2.2rem;
+  margin: .8rem 0 0;
+  background: var(--color-bg-alt);
+  list-style: decimal;
+  font-size: .86rem;
+}
+
+.roro-part-key li::marker {
+  color: var(--color-emphasis);
+  font-weight: 650;
+}
+
+.roro-gait {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(.55rem, 1.5vw, 1rem);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.roro-project .roro-gait-phase h3 {
+  margin: 0 0 .65rem;
+  font-size: clamp(.88rem, 1.65vw, 1.075rem);
+  font-weight: 600;
+  letter-spacing: -.015em;
+}
+
+.roro-result {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem 2.25rem;
+  margin-top: 1.6rem;
+  padding: 1.1rem 1.3rem;
+  background: var(--color-bg-alt);
+}
+
+.roro-result strong {
+  display: block;
+  font-weight: 550;
+  font-size: clamp(2rem, 5vw, 3rem);
+  letter-spacing: -.065em;
+  line-height: 1.15;
+}
+
+.roro-result p {
+  max-width: 35ch;
+}
+
+.roro-project .roro-film {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.roro-project .project-section .roro-embed {
+  margin-top: 0;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+
+.roro-embed .video-facade {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.roro-archive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  padding-block: .5rem 1rem;
+}
+
+@media (max-width: 740px) {
+  .roro-hero {
+    grid-template-columns: minmax(0, 1fr);
+    row-gap: 1.5rem;
+  }
+}
+
+@media (max-width: 570px) {
+  .roro-gait {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.15rem;
+  }
+
+  .roro-archive-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+
+  .roro-part-key {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.roro-process-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.roro-process-clip {
+  min-width: 0;
+}
+
+.roro-process-clip video {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  background: #141416;
+}
+
+.roro-process-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: .75rem;
+  margin-top: .35rem;
+}
+
+.roro-process-meta p,
+.roro-project .roro-film-caption {
+  margin: 0;
+  padding-top: .3rem;
+  color: var(--color-text-muted);
+  font-size: .92rem;
+  line-height: 1.45;
+}
+
+.roro-project .roro-film-caption {
+  margin-top: .35rem;
+}
+
+.roro-sound-toggle {
+  flex: 0 0 auto;
+  margin-left: auto;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  padding: .5rem;
+  border: 1px solid var(--color-border);
+  background: transparent;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.roro-sound-toggle svg {
+  display: block;
+  margin: auto;
+}
+
+.roro-sound-toggle[data-muted="true"] .roro-sound-waves,
+.roro-sound-toggle[data-muted="false"] .roro-sound-cross {
+  display: none;
+}
+
+.roro-sound-toggle:hover {
+  background: var(--color-bg-alt);
+}
+
+@media (max-width: 570px) {
+  .roro-process-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .roro-process-clip video[width="568"] {
+    aspect-ratio: 568 / 320;
+  }
+}

@@ -1,0 +1,417 @@
+.lighting-hero {
+  margin-top: 1.25rem;
+}
+
+.lighting-hero .project-visual {
+  overflow: hidden;
+  background: #020203;
+}
+
+.lighting-hero__toggle {
+  position: absolute;
+  z-index: 2;
+  right: 1rem;
+  bottom: 1rem;
+  min-width: 4.75rem;
+  min-height: 2.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  background: rgba(5, 5, 7, 0.72);
+  color: #fff;
+  font: 500 0.78rem/1 var(--font-display);
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.lighting-hero__toggle:hover {
+  background: rgba(5, 5, 7, 0.92);
+}
+
+.lighting-hero__toggle:focus-visible,
+.lighting-study:focus-visible,
+.lighting-lightbox button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.lighting-intro {
+  padding-bottom: clamp(3rem, 7vw, 6rem);
+}
+
+.lighting-intro h1 {
+  max-width: none;
+}
+
+.lighting-intro .project-subtitle {
+  max-width: 62ch;
+}
+
+.lighting-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem 1.5rem;
+  align-items: center;
+  margin-top: clamp(2rem, 5vw, 4rem);
+  padding-block: 1.25rem;
+  border-block: 1px solid var(--color-border);
+}
+
+.lighting-stack > span {
+  color: var(--color-text-muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.lighting-stack ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lighting-stack li {
+  padding: 0.45rem 0.72rem;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  line-height: 1.2;
+}
+
+.lighting-salon {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding: 0 var(--gutter) clamp(6rem, 12vw, 10rem);
+}
+
+.lighting-salon__header {
+  display: grid;
+  gap: 0.75rem;
+  margin-bottom: clamp(2.5rem, 6vw, 5rem);
+}
+
+.lighting-salon__header h2 {
+  font-family: var(--font-serif-highlight);
+  font-size: clamp(2rem, 4vw, 3.75rem);
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: -0.02em;
+}
+
+.lighting-salon__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(1rem, 2.4vw, 2.5rem);
+  align-items: start;
+}
+
+.lighting-study {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 0;
+  background: #030304;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 1.25rem 3rem rgba(0, 0, 0, 0.2);
+  transition: transform 220ms var(--ease), border-color 220ms var(--ease), box-shadow 220ms var(--ease);
+}
+
+.lighting-study--landscape {
+  aspect-ratio: 16 / 10;
+}
+
+.lighting-study:nth-child(4n + 2) {
+  margin-top: clamp(2.75rem, 6vw, 6rem);
+}
+
+.lighting-study:nth-child(4n + 3) {
+  margin-top: clamp(0.75rem, 2.5vw, 2.5rem);
+}
+
+.lighting-study:nth-child(4n + 4) {
+  margin-top: clamp(4.5rem, 9vw, 8.5rem);
+}
+
+.lighting-study video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+
+.lighting-study::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.48), transparent 35%);
+  pointer-events: none;
+}
+
+.lighting-study::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-top: 0.48rem solid transparent;
+  border-bottom: 0.48rem solid transparent;
+  border-left: 0.75rem solid rgba(255, 255, 255, 0.94);
+  transform: translate(-42%, -50%);
+  filter: drop-shadow(0 0 1rem rgba(0, 0, 0, 0.8));
+  transition: opacity 180ms var(--ease);
+}
+
+.lighting-study__number {
+  position: absolute;
+  z-index: 2;
+  right: 0.75rem;
+  bottom: 0.65rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+}
+
+.lighting-study:hover,
+.lighting-study:focus-visible {
+  border-color: rgba(255, 255, 255, 0.62);
+  box-shadow: 0 1.75rem 4rem rgba(0, 0, 0, 0.38);
+  transform: translateY(-0.35rem) scale(1.012);
+}
+
+.lighting-lightbox {
+  width: 100vw;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: rgba(4, 4, 6, 0.98);
+  color: #fff;
+}
+
+.lighting-lightbox::backdrop {
+  background: rgba(0, 0, 0, 0.92);
+}
+
+.lighting-lightbox__panel {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: clamp(3.75rem, 7vw, 6rem) clamp(4rem, 8vw, 8rem) clamp(2.5rem, 5vw, 4rem);
+}
+
+.lighting-lightbox__figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  gap: 0.9rem;
+  width: min(100%, 80rem);
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+}
+
+.lighting-lightbox__figure video {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+  background: #000;
+}
+
+.lighting-lightbox__figure figcaption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.lighting-lightbox button {
+  display: grid;
+  place-items: center;
+  width: 3rem;
+  height: 3rem;
+  padding: 0;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.56);
+  color: #fff;
+  cursor: pointer;
+  transition: background 180ms var(--ease), border-color 180ms var(--ease);
+}
+
+.lighting-lightbox button:hover {
+  border-color: rgba(255, 255, 255, 0.82);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.lighting-lightbox button svg {
+  width: 1.35rem;
+  height: 1.35rem;
+}
+
+.lighting-lightbox__close {
+  position: absolute;
+  z-index: 3;
+  top: 1rem;
+  right: 1rem;
+}
+
+.lighting-lightbox__arrow {
+  position: absolute;
+  z-index: 3;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lighting-lightbox__arrow--previous {
+  left: 1rem;
+}
+
+.lighting-lightbox__arrow--next {
+  right: 1rem;
+}
+
+.lighting-lightbox-lock {
+  overflow: hidden;
+}
+
+.lighting-reflection {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(18rem, 0.65fr);
+  gap: clamp(3rem, 8vw, 9rem);
+  align-items: start;
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding: 0 var(--gutter) clamp(6rem, 12vw, 10rem);
+}
+
+.lighting-reflection__text h2 {
+  max-width: 11ch;
+  margin: 0.75rem 0 clamp(1.75rem, 4vw, 3rem);
+  font-family: var(--font-serif-highlight);
+  font-size: clamp(2rem, 4.5vw, 4.25rem);
+  font-style: italic;
+  font-weight: 300;
+  letter-spacing: -0.025em;
+  line-height: 1;
+}
+
+.lighting-reflection__text > p:not(.section-label) {
+  max-width: 58ch;
+  font-size: clamp(1rem, 1.3vw, 1.15rem);
+  line-height: 1.75;
+}
+
+.lighting-reflection__text > p + p {
+  margin-top: 1.25rem;
+}
+
+.lighting-reflection__figure {
+  margin: 0;
+}
+
+.lighting-reflection__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--color-border);
+  background: #fff;
+}
+
+.lighting-reflection__figure figcaption {
+  margin-top: 0.75rem;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+  .lighting-salon__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lighting-study:nth-child(n) {
+    margin-top: 0;
+  }
+
+  .lighting-study:nth-child(even) {
+    margin-top: 3rem;
+  }
+
+  .lighting-lightbox__panel {
+    padding-inline: 3.5rem;
+  }
+
+  .lighting-reflection {
+    grid-template-columns: minmax(0, 1fr) minmax(16rem, 0.72fr);
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .lighting-stack {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .lighting-salon__grid {
+    gap: 0.75rem;
+  }
+
+  .lighting-study:nth-child(even) {
+    margin-top: 2rem;
+  }
+
+  .lighting-lightbox__panel {
+    padding: 4rem 0.75rem 5.25rem;
+  }
+
+  .lighting-lightbox__arrow {
+    top: auto;
+    bottom: 0.85rem;
+    transform: none;
+  }
+
+  .lighting-lightbox__arrow--previous {
+    left: calc(50% - 3.65rem);
+  }
+
+  .lighting-lightbox__arrow--next {
+    right: calc(50% - 3.65rem);
+  }
+
+  .lighting-reflection {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lighting-study,
+  .lighting-study::after,
+  .lighting-lightbox button {
+    transition: none;
+  }
+
+  .lighting-study:hover,
+  .lighting-study:focus-visible {
+    transform: none;
+  }
+}

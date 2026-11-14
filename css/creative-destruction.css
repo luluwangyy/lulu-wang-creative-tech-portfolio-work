@@ -1,0 +1,49 @@
+.residency-media-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.residency-media-grid > figure {
+  min-width: 0;
+  margin: 0;
+}
+
+.project-section .residency-media-grid .project-visual {
+  margin-top: 0;
+}
+
+.residency-note-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.residency-media-grid .media-caption {
+  line-height: 1.5;
+}
+
+#technical-documentation h3 {
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+
+#technical-documentation .residency-doc-date {
+  margin-top: 0;
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+#technical-documentation code {
+  padding: 0.1rem 0.3rem;
+  background: var(--color-bg-alt);
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 700px) {
+  .residency-media-grid {
+    grid-template-columns: 1fr;
+  }
+}

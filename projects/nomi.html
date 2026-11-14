@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nomi — Yueyi Lulu Wang</title>
+  <meta name="description" content="Nomi is a two-sided medication-tracking app that helps parents confirm their routines and gives family members a lightweight way to check in.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Averia+Serif+Libre:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css?v=next-project-arrow">
+</head>
+<body class="case-study nomi-case">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="nav-morph">
+        <button type="button" class="nav-morph__trigger" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="nav-morph__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <nav class="segmented-control" aria-label="Primary" id="primary-nav">
+          <span class="segmented-control__pill" aria-hidden="true"></span>
+          <a href="../index.html" class="segmented-control__item">Home</a>
+          <a href="../make.html" class="segmented-control__item">Make</a>
+          <a href="../work.html" class="segmented-control__item">Work</a>
+          <a href="../play.html" class="segmented-control__item">Play</a>
+          <a href="../about.html" class="segmented-control__item">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="case-mobile-nav">
+      <button class="case-mobile-nav__trigger" type="button" aria-label="Open section navigation" aria-expanded="false" aria-controls="case-mobile-menu">
+        <span class="case-mobile-nav__index" aria-hidden="true">01</span>
+      </button>
+      <nav class="case-mobile-nav__menu" id="case-mobile-menu" aria-label="Case study sections">
+        <a class="is-active" href="#overview" aria-current="true"><span>01</span> Overview</a>
+        <a href="#context"><span>02</span> Project Context</a>
+        <a href="#artifact"><span>03</span> Final Artifact</a>
+        <a href="#moments"><span>04</span> Key Design Moments</a>
+        <a href="#impact"><span>05</span> Outcome</a>
+        <a href="#reflection"><span>06</span> Reflection</a>
+      </nav>
+    </div>
+
+    <div class="case-layout">
+      <aside class="case-rail" aria-label="Nomi case study navigation">
+        <div class="case-rail__sticky">
+          <a href="../work.html" class="case-back-link">← Back to Work</a>
+
+          <p class="case-rail__eyebrow">In this case study</p>
+          <nav class="case-nav" aria-label="On this page">
+            <a class="case-nav__link is-active" href="#overview" aria-current="true">Overview</a>
+            <a class="case-nav__link" href="#context">Project Context</a>
+            <a class="case-nav__link" href="#artifact">Final Artifact</a>
+            <a class="case-nav__link" href="#moments">Key Design Moments</a>
+            <a class="case-nav__link" href="#impact">Outcome</a>
+            <a class="case-nav__link" href="#reflection">Reflection</a>
+          </nav>
+
+          <div class="case-rail__actions" aria-label="Project links">
+            <a href="../nomi-demo/?v=10">Try Live Demo ↗</a>
+          </div>
+
+          <dl class="case-rail__meta">
+            <div>
+              <dt>Role</dt>
+              <dd>Product designer + full-stack engineer</dd>
+            </div>
+            <div>
+              <dt>Skills</dt>
+              <dd>Research · UI/UX · React · TypeScript</dd>
+            </div>
+            <div>
+              <dt>Time</dt>
+              <dd>Aug. 2026</dd>
+            </div>
+            <div>
+              <dt>Platform</dt>
+              <dd>Responsive web</dd>
+            </div>
+            <div>
+              <dt>Audience</dt>
+              <dd>Parents + family members</dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+
+      <article class="case-story">
+        <section class="case-section case-overview" id="overview" aria-labelledby="overview-label">
+          <figure class="case-front-image case-front-image--pending">
+            <img src="../assets/images/nomi/cover.jpg" alt="Nomi parent and family medication views shown on two phones">
+          </figure>
+          <h1>Nomi</h1>
+          <p class="case-kicker" id="overview-label">Overview</p>
+          <p class="case-statement case-statement--hero">
+            Nomi is a <strong class="case-accent">two-sided medication-tracking app</strong> with shared live state, helping parents log what they’ve taken while giving family members a lightweight way to <span class="case-accent">check in</span> when something hasn’t been confirmed.
+          </p>
+
+          <div class="case-role" aria-labelledby="role-title">
+            <p class="case-kicker" id="role-title">My Role</p>
+            <p class="case-role__summary">I took Nomi from early research through a working prototype:</p>
+            <dl>
+              <div>
+                <dt>Research</dt>
+                <dd>Family interviews · problem framing · user flows</dd>
+              </div>
+              <div>
+                <dt>Design</dt>
+                <dd>Interaction design · Figma prototyping · visual system</dd>
+              </div>
+              <div>
+                <dt>Build</dt>
+                <dd>React / TypeScript · shared live state · responsive implementation</dd>
+              </div>
+              <div>
+                <dt>Iteration</dt>
+                <dd>Usability testing · interaction refinement · live prototype</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="case-section" id="context" aria-labelledby="context-label">
+          <p class="case-kicker" id="context-label">Project Context</p>
+          <div class="case-prose">
+            <p>I started with a simple assumption: older adults needed better <span class="case-accent">medication reminders</span>.</p>
+            <p>But after speaking with <strong>10 families</strong>, I realized that wasn’t quite the problem.</p>
+            <p>Parents often remembered to take their medication. What they forgot was whether they had <strong>already taken it</strong>, especially when their usual routine changed.</p>
+            <p>At the same time, existing pill boxes and reminder systems mostly served the person taking the medication. Family members who cared about them had no simple way to know what was going on without calling.</p>
+          </div>
+
+          <p class="case-statement case-statement--spaced">The problem wasn’t just forgetting. It was <span class="case-accent">uncertainty on both sides</span>.</p>
+
+          <div class="case-dual-questions" aria-label="The uncertainty experienced by parents and family members">
+            <article>
+              <span>For parents</span>
+              <p>“Did I already take this?”</p>
+            </article>
+            <article>
+              <span>For family</span>
+              <p>“Is everything okay?”</p>
+            </article>
+          </div>
+
+          <p class="case-bridge-copy">That shifted Nomi from a reminder app into a two-sided experience built around <span class="case-accent"><strong>self-confirmation</strong></span> for parents and <span class="case-accent"><strong>lightweight reassurance</strong></span> for family members.</p>
+        </section>
+
+        <section class="case-section" id="artifact" aria-labelledby="artifact-label">
+          <p class="case-kicker" id="artifact-label">Final Artifact</p>
+          <p class="case-section-intro">Nomi connects two sides of the same medication routine.</p>
+
+          <div class="artifact-views" aria-label="Three parts of the Nomi experience">
+            <article class="artifact-view">
+              <span class="artifact-view__number">01</span>
+              <h2>Parent</h2>
+              <p>Parents see today’s medications and mark them as taken when they actually take them.</p>
+            </article>
+            <article class="artifact-view">
+              <span class="artifact-view__number">02</span>
+              <h2>Family</h2>
+              <p>The family view reflects the parent’s confirmations in real time, and can edit medication schedules for parents.</p>
+            </article>
+            <article class="artifact-view">
+              <span class="artifact-view__number">03</span>
+              <h2>Gentle Check-In</h2>
+              <p>If something hasn’t been confirmed, a family member can send a small check-in directly through Nomi.</p>
+            </article>
+          </div>
+
+          <figure class="case-design-board">
+            <img src="../assets/images/nomi/figma.jpg" alt="Nomi parent and family interface designs with the supporting visual system" loading="lazy">
+            <figcaption>Parent and family interface explorations · visual system</figcaption>
+          </figure>
+
+          <p class="case-statement case-statement--spaced">Parent confirms → family knows → family can <span class="case-accent">check in</span> when needed.</p>
+
+          <figure class="case-prototype">
+            <div class="nomi-embed">
+              <button type="button" class="nomi-fullscreen-btn" aria-label="Enter fullscreen">
+                <svg class="icon-expand" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M9 4H4v5M15 4h5v5M9 20H4v-5M15 20h5v-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <svg class="icon-collapse" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M4 9V4h5M4 15v5h5M20 9V4h-5M20 15v5h-5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </button>
+              <iframe src="../nomi-demo/?v=10" title="Nomi interactive parent and family prototype" loading="lazy"></iframe>
+            </div>
+            <figcaption>Working two-sided prototype · both phones share live state</figcaption>
+          </figure>
+        </section>
+
+        <section class="case-section case-moments" id="moments" aria-labelledby="moments-label">
+          <p class="case-kicker" id="moments-label">Key Design Moments</p>
+
+          <article class="design-moment">
+            <header class="design-moment__header">
+              <span>01</span>
+              <h2>Designing for two generations</h2>
+            </header>
+
+            <div class="case-prose case-prose--moment">
+              <p>Nomi needed to work for two very different users: parents in their <strong>50s–60s</strong> managing medication, and adult children in their <strong>20s–30s</strong> checking in from a distance.</p>
+              <p>For the parent experience, I focused on two accessibility decisions:</p>
+            </div>
+
+            <div class="design-submoment-grid">
+              <section class="design-submoment" aria-labelledby="simpler-language-title">
+                <h3 class="design-submoment__title" id="simpler-language-title"><span>01</span> Simpler language</h3>
+                <p class="case-statement case-statement--submoment">Reduce unnecessary captions and replace unfamiliar terms with <span class="case-accent">short, direct language</span>.</p>
+
+                <figure class="before-after-slider" data-before-after style="--before-after-position: 50%;">
+                  <div class="before-after-slider__stage">
+                    <img class="before-after-slider__image before-after-slider__image--after" src="../assets/images/nomi/after_parent_size.jpg" alt="Revised Nomi parent support screen using concise labels without secondary captions">
+                    <div class="before-after-slider__before" aria-hidden="true">
+                      <img class="before-after-slider__image" src="../assets/images/nomi/before_parent_size.jpg" alt="">
+                    </div>
+                    <span class="before-after-slider__label before-after-slider__label--before">Before</span>
+                    <span class="before-after-slider__label before-after-slider__label--after">After</span>
+                    <span class="before-after-slider__divider" aria-hidden="true"><i>↔</i></span>
+                    <input type="range" min="0" max="100" value="50" aria-label="Compare the original and simplified parent support screens">
+                  </div>
+                </figure>
+              </section>
+
+              <section class="design-submoment" aria-labelledby="adjustable-text-title">
+                <h3 class="design-submoment__title" id="adjustable-text-title"><span>02</span> Adjustable text size</h3>
+                <p class="case-statement case-statement--submoment">Parents can choose the <span class="case-accent">font size they feel comfortable with</span>.</p>
+
+                <div class="case-prose">
+                  <p>Instead of a fixed accessibility mode, the layout adapts as text grows, keeping medication names, status, and actions readable without breaking the interface.</p>
+                </div>
+
+                <figure class="case-product-video">
+                  <video autoplay muted loop playsinline preload="metadata" aria-label="Nomi adjustable text-size accessibility demonstration">
+                    <source src="../assets/videos/nomi/accessibility.mp4" type="video/mp4">
+                  </video>
+                </figure>
+              </section>
+            </div>
+
+            <p class="case-statement case-statement--closing">Accessibility shaped both <span class="case-accent">what people read</span> and <span class="case-accent">how they read it</span>.</p>
+          </article>
+
+          <article class="design-moment">
+            <header class="design-moment__header">
+              <span>02</span>
+              <h2>Creating something between silence and a phone call</h2>
+            </header>
+
+            <div class="case-prose case-prose--moment">
+              <p>For family members, the problem was almost the reverse.</p>
+              <p>When something wasn’t confirmed, there were usually two choices:</p>
+            </div>
+
+            <div class="case-dual-questions case-dual-questions--choices" aria-label="The two choices family members previously had">
+              <article>
+                <span>Option 01</span>
+                <p>Say nothing and keep wondering</p>
+              </article>
+              <article>
+                <span>Option 02</span>
+                <p>Call</p>
+              </article>
+            </div>
+
+            <div class="case-prose">
+              <p>But sometimes a phone call felt like too much for such a small question.</p>
+            </div>
+
+            <p class="case-statement case-statement--spaced">A phone call felt like too much. Silence felt like <span class="case-accent">not enough</span>.</p>
+
+            <div class="case-prose">
+              <p>That led to <strong>Gentle Check-In</strong>.</p>
+              <p>Instead of sending an alarming notification, a family member can send a small check-in through Nomi. The parent can respond directly, resolving the uncertainty without making the interaction feel urgent.</p>
+            </div>
+
+            <figure class="case-product-video">
+              <video autoplay muted loop playsinline preload="metadata">
+                <source src="../assets/videos/nomi/gentle-checkin.mp4" type="video/mp4">
+              </video>
+              <figcaption>Gentle Check-In interaction</figcaption>
+            </figure>
+
+            <p class="case-bridge-copy">This became important to the tone of the whole product: Nomi should help family members stay connected without making every missing confirmation feel like a problem.</p>
+          </article>
+        </section>
+
+        <section class="case-section" id="impact" aria-labelledby="impact-label">
+          <p class="case-kicker" id="impact-label">Outcome</p>
+          <div class="case-prose">
+            <p>I developed Nomi into a working two-sided prototype rather than stopping at static Figma screens.</p>
+            <p>The final experience connects the parent and family views through shared live state, so an action on one side immediately changes what the other person sees.</p>
+          </div>
+
+          <div class="impact-metrics">
+            <div class="impact-metric--copy">
+              <strong>10 families interviewed</strong>
+              <span>research changed the product direction</span>
+            </div>
+            <div class="impact-metric--copy">
+              <strong>Parent ↔ Family</strong>
+              <span>working two-sided live prototype</span>
+            </div>
+            <div class="impact-metric--copy">
+              <strong>Gentle Check-In</strong>
+              <span>a new interaction for resolving uncertainty</span>
+            </div>
+            <div class="impact-metric--copy">
+              <strong>Adjustable Type</strong>
+              <span>accessibility built into the parent experience</span>
+            </div>
+          </div>
+
+          <div class="impact-ending">
+            <p>One action on either side gives the other person clearer, calmer information.</p>
+            <div class="impact-actions">
+              <a href="../nomi-demo/?v=10">Try Live Demo ↗</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="reflection" aria-labelledby="reflection-label">
+          <p class="case-kicker" id="reflection-label">Reflection</p>
+          <div class="case-prose">
+            <p>Nomi made me think differently about what “helpful” means in a family-care product.</p>
+            <p>More reminders, more alerts, and more visibility aren’t automatically better.</p>
+          </div>
+
+          <p class="case-final-statement">Helping someone doesn’t always mean watching more closely. Sometimes it means giving both sides <span class="case-accent">just enough information</span>.</p>
+        </section>
+      </article>
+    </div>
+
+    <nav class="related-projects next-project" aria-label="Next project">
+      <a href="urbansky.html" class="related-card next-project-link">
+        <div>
+          <span class="related-card-title">UrbanSky</span>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 5v14m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <p class="next-project-hint" hidden>Keep scrolling to continue</p>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Yueyi Lulu Wang</span>
+      <div class="footer-links">
+        <a href="mailto:lulu.yueyi.wang@gmail.com">Email</a>
+        <a href="https://github.com/luluwangyy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=media-autoplay-1"></script>
+  <script src="../js/next-project.js" defer></script>
+</body>
+</html>

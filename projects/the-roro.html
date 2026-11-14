@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c0f">
+  <title>RoRo — Yueyi Lulu Wang</title>
+  <meta name="description" content="RoRo is Yueyi Lulu Wang’s wireless, battery-powered quadruped, designed in Fusion 360, 3D printed, and programmed in Python.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Averia+Serif+Libre:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css?v=next-project-arrow">
+  <link rel="stylesheet" href="../css/roro.css?v=component-design">
+</head>
+<body class="make-project make-project--indexed roro-project">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="nav-morph">
+        <button type="button" class="nav-morph__trigger" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="nav-morph__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <nav class="segmented-control" aria-label="Primary" id="primary-nav">
+          <span class="segmented-control__pill" aria-hidden="true"></span>
+          <a href="../index.html" class="segmented-control__item">Home</a>
+          <a href="../make.html" class="segmented-control__item">Make</a>
+          <a href="../work.html" class="segmented-control__item">Work</a>
+          <a href="../play.html" class="segmented-control__item">Play</a>
+          <a href="../about.html" class="segmented-control__item">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="project-detail-visual roro-motion" id="demo-video">
+      <div class="project-visual roro-embed">
+        <iframe src="https://www.youtube.com/embed/nmBlwx0LSoI?autoplay=1&amp;mute=1&amp;playsinline=1&amp;start=1&amp;rel=0&amp;enablejsapi=1"
+          title="RoRo short film" allow="autoplay; encrypted-media; picture-in-picture; fullscreen"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </div>
+    <section class="project-detail-hero roro-hero" id="overview" aria-labelledby="roro-title">
+      <div class="roro-hero-copy">
+        <a href="../make.html" class="back-link">&larr; Back to Make</a>
+        <h1 id="roro-title">RoRo</h1>
+        <p>I built RoRo, a wireless, battery-powered quadruped, in Professor Hod Lipson’s <a href="https://ftp.columbia.edu/cu/bulletin/uwb/subj/MECE/E4611-20253-001/">Robotics Studio (MECE E4611)</a> in Columbia University’s Department of Mechanical Engineering in fall 2025.</p>
+        <p>The assignment was to build a working robot from scratch in one semester. The only hardware provided was LX-16 servos and a Raspberry Pi. I designed the chassis, legs, and servo brackets in Fusion 360, 3D printed and assembled them, and wrote the walking gait in Python.</p>
+      </div>
+
+      <div class="roro-hero-pictures">
+        <figure class="roro-figure">
+          <img src="../assets/images/the-roro/portfolio/studio-stance.webp" width="1500" height="1040" alt="Three-quarter studio rendering of RoRo standing on four printed legs" loading="lazy" decoding="async">
+        </figure>
+        <figure class="roro-figure">
+          <img src="../assets/images/the-roro/portfolio/movement-lab.webp" width="921" height="553" alt="RoRo prototype on the Movement Lab stage under a blue spotlight" loading="lazy" decoding="async">
+        </figure>
+      </div>
+    </section>
+
+    <div class="project-detail-split roro-study">
+      <nav class="project-toc" aria-label="On this page">
+        <p class="project-toc__label">Contents</p>
+        <ul class="project-toc__list">
+          <li><a class="project-toc__link" href="#overview">Overview</a></li>
+          <li><a class="project-toc__link" href="#build-timeline">Design from scratch</a></li>
+          <li><a class="project-toc__link" href="#build-notes">Build process</a></li>
+          <li><a class="project-toc__link" href="#walking-gait">Final outcome</a></li>
+          <li><a class="project-toc__link" href="#movement-lab">Mars documentary</a></li>
+          <li><a class="project-toc__link" href="#playing-during-the-process">Playing during the process</a></li>
+        </ul>
+      </nav>
+
+      <div class="project-detail-body">
+        <section class="project-section roro-section" id="build-timeline">
+          <h2>Design from scratch</h2>
+          <h3>Servo bracket</h3>
+          <p class="roro-copy">I designed the servo bracket in Fusion 360 to connect the hip and knee servos at right angles. The first version, reconstructed on the left, left too little room for the servo wheel to turn. The revised CAD on the right shows the circular recess I added for clearance.</p>
+          <div class="roro-pair roro-brackets">
+            <figure class="roro-figure">
+              <img src="../assets/images/the-roro/portfolio/bracket-before.webp" width="792" height="632" alt="Reconstructed original servo bracket without a clearance recess" loading="lazy" decoding="async">
+            </figure>
+            <figure class="roro-figure">
+              <img src="../assets/images/the-roro/portfolio/bracket-after.webp" width="780" height="622" alt="Revised Fusion 360 bracket with a circular recess for the servo wheel" loading="lazy" decoding="async">
+            </figure>
+          </div>
+
+          <h3>Leg assembly</h3>
+          <p class="roro-copy">I used a fixture to check the fit and range of motion on one leg before repeating the module at each corner.</p>
+
+          <div class="roro-pair">
+            <figure class="roro-figure">
+              <img src="../assets/images/the-roro/portfolio/studio-stride.webp" width="1500" height="1040" alt="Studio rendering of RoRo in a posed stride with one leg swung forward" loading="lazy" decoding="async">
+            </figure>
+            <figure class="roro-figure">
+              <img src="../assets/images/the-roro/portfolio/assembled.webp" width="1700" height="1100" alt="Assembled RoRo with four printed leg modules and the Raspberry Pi on top" loading="lazy" decoding="async">
+            </figure>
+          </div>
+          <div class="roro-render-gallery">
+            <img src="../assets/images/the-roro/portfolio/model-01.webp" width="844" height="320" alt="Blender study of a possible leg position, pose 1" loading="lazy" decoding="async"><img src="../assets/images/the-roro/portfolio/model-02.webp" width="844" height="320" alt="Blender study of a possible leg position, pose 2" loading="lazy" decoding="async"><img src="../assets/images/the-roro/portfolio/model-03.webp" width="844" height="320" alt="Blender study of a possible leg position, pose 3" loading="lazy" decoding="async">
+          </div>
+
+          <figure class="roro-figure roro-exploded">
+            <div class="roro-exploded-stage">
+              <img src="../assets/images/the-roro/portfolio/exploded.webp" width="1712" height="1024" alt="Exploded reconstruction separating one printed leg module and the Raspberry Pi, converter, and battery" loading="lazy" decoding="async">
+              <ol class="roro-pins" aria-label="Locations of components">
+                <li style="--x:50.5%;--y:12%;"><span aria-hidden="true">1</span><span class="roro-sr">Raspberry Pi at the top center</span></li>
+                <li style="--x:73.8%;--y:20.9%;"><span aria-hidden="true">2</span><span class="roro-sr">DC–DC converter to the upper right</span></li>
+                <li style="--x:80.4%;--y:36.4%;"><span aria-hidden="true">3</span><span class="roro-sr">Battery pack to the right</span></li>
+                <li style="--x:35%;--y:46.8%;"><span aria-hidden="true">4</span><span class="roro-sr">Printed bracket at the separated hip joint</span></li>
+                <li style="--x:28%;--y:57.1%;"><span aria-hidden="true">5</span><span class="roro-sr">Knee servo between the bracket and leg</span></li>
+                <li style="--x:23.3%;--y:79%;"><span aria-hidden="true">6</span><span class="roro-sr">Printed leg at the lower left</span></li>
+              </ol>
+            </div>
+            <ol class="roro-part-key">
+              <li>Raspberry Pi</li><li>DC–DC converter</li><li>Battery pack</li>
+              <li>Printed bracket</li><li>Knee servo</li><li>Printed leg</li>
+            </ol>
+          </figure>
+        </section>
+
+        <section class="project-section roro-section" id="build-notes">
+          <h2>Build process</h2>
+          <div class="roro-archive-grid">
+            <figure class="roro-figure">
+              <a href="../assets/images/the-roro/2.png" aria-label="Open the full-size build notes for step 2">
+                <img src="../assets/images/the-roro/2.png" width="2000" height="1119" alt="Original RoRo build notes, step 2" loading="lazy" decoding="async">
+              </a>
+            </figure>
+            <figure class="roro-figure">
+              <a href="../assets/images/the-roro/3.png" aria-label="Open the full-size build notes for step 3">
+                <img src="../assets/images/the-roro/3.png" width="2000" height="1113" alt="Original RoRo build notes, step 3" loading="lazy" decoding="async">
+              </a>
+            </figure>
+            <figure class="roro-figure">
+              <a href="../assets/images/the-roro/4.png" aria-label="Open the full-size build notes for step 4">
+                <img src="../assets/images/the-roro/4.png" width="2000" height="1118" alt="Original RoRo build notes, step 4" loading="lazy" decoding="async">
+              </a>
+            </figure>
+            <figure class="roro-figure">
+              <a href="../assets/images/the-roro/5.png" aria-label="Open the full-size build notes for step 5">
+                <img src="../assets/images/the-roro/5.png" width="2000" height="1125" alt="Original RoRo build notes, step 5" loading="lazy" decoding="async">
+              </a>
+            </figure>
+          </div>
+        </section>
+
+        <section class="project-section roro-section" id="walking-gait">
+          <h2>Final outcome</h2>
+          <h3>Walking gait</h3>
+          <p class="roro-copy">The onboard battery and Raspberry Pi let RoRo walk wirelessly. On startup, the Python script polls each servo, flags timeouts by ID, and sends a short test move to the servos that respond. These three frames show how the prototype moves in the bench test.</p>
+          <ol class="roro-gait">
+            <li class="roro-gait-phase">
+              <h3>Stance</h3>
+              <figure class="roro-figure">
+                <img src="../assets/images/the-roro/portfolio/prototype-01.webp" width="703" height="266" alt="Still from the prototype walking test standing before the next step" loading="lazy" decoding="async">
+              </figure>
+            </li>
+            <li class="roro-gait-phase">
+              <h3>Front leg reaches</h3>
+              <figure class="roro-figure">
+                <img src="../assets/images/the-roro/portfolio/prototype-02.webp" width="703" height="266" alt="Still from the prototype walking test with the front leg extended" loading="lazy" decoding="async">
+              </figure>
+            </li>
+            <li class="roro-gait-phase">
+              <h3>Rear leg follows</h3>
+              <figure class="roro-figure">
+                <img src="../assets/images/the-roro/portfolio/prototype-03.webp" width="703" height="266" alt="Still from the prototype walking test with the rear leg swung inward" loading="lazy" decoding="async">
+              </figure>
+            </li>
+          </ol>
+          <div class="roro-result">
+            <strong>13.54 cm/s</strong>
+            <p>In the fastest run, I measured 13 cm of travel in 0.96 s using tape marks spaced 5 cm apart.</p>
+          </div>
+        </section>
+
+        <section class="project-section roro-section roro-film" id="movement-lab" aria-label="RoRo Mars documentary">
+          <div class="project-visual roro-embed">
+            <button type="button" class="video-facade" style="background-image:url('https://img.youtube.com/vi/wV1exYWzAVU/hqdefault.jpg')" data-embed-src="https://www.youtube.com/embed/wV1exYWzAVU?autoplay=1&amp;playsinline=1&amp;rel=0" data-embed-title="RoRo Mars documentary" data-embed-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" aria-label="Play RoRo Mars documentary">
+              <span class="video-facade-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
+          </div>
+          <p class="roro-film-caption">Mars documentary. At Movement Lab, I projected the surface of the Moon.</p>
+        </section>
+
+        <section class="project-section roro-section" id="playing-during-the-process" aria-labelledby="roro-process-heading">
+          <h2 id="roro-process-heading">Playing during the process</h2>
+          <div class="roro-process-grid">
+            <div class="roro-process-clip">
+              <video controls muted loop playsinline preload="none" width="568" height="320" poster="../assets/videos/the-roro/process-1.webp" aria-label="Process clip 1" aria-describedby="process-note-1">
+                <source src="../assets/videos/the-roro/process-1.mp4" type="video/mp4">
+              </video>
+              <div class="roro-process-meta">
+                <p id="process-note-1">I made custom cyanotype fabric for this prototype.</p>
+                <button class="roro-sound-toggle" type="button" data-clip="1" aria-label="Unmute process clip 1" data-muted="true" hidden>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M11 5 6 9H3v6h3l5 4z"/>
+                    <path class="roro-sound-waves" d="M15 9a4 4 0 0 1 0 6m3-9a8 8 0 0 1 0 12"/>
+                    <path class="roro-sound-cross" d="m15 9 6 6m0-6-6 6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="roro-process-clip">
+              <video controls muted loop playsinline preload="none" width="320" height="568" poster="../assets/videos/the-roro/process-2.webp" aria-label="Process clip 2" aria-describedby="process-note-2">
+                <source src="../assets/videos/the-roro/process-2.mp4" type="video/mp4">
+              </video>
+              <div class="roro-process-meta">
+                <p id="process-note-2">The robot dances in front of my cyanotype prints to leave a mark in the sunlight.</p>
+                <button class="roro-sound-toggle" type="button" data-clip="2" aria-label="Unmute process clip 2" data-muted="true" hidden>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M11 5 6 9H3v6h3l5 4z"/>
+                    <path class="roro-sound-waves" d="M15 9a4 4 0 0 1 0 6m3-9a8 8 0 0 1 0 12"/>
+                    <path class="roro-sound-cross" d="m15 9 6 6m0-6-6 6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="roro-process-clip">
+              <video controls muted loop playsinline preload="none" width="320" height="568" poster="../assets/videos/the-roro/process-3.webp" aria-label="Process clip 3" aria-describedby="process-note-3">
+                <source src="../assets/videos/the-roro/process-3.mp4" type="video/mp4">
+              </video>
+              <div class="roro-process-meta">
+                <p id="process-note-3">A small robotic arm makes a sketch.</p>
+                <button class="roro-sound-toggle" type="button" data-clip="3" aria-label="Unmute process clip 3" data-muted="true" hidden>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M11 5 6 9H3v6h3l5 4z"/>
+                    <path class="roro-sound-waves" d="M15 9a4 4 0 0 1 0 6m3-9a8 8 0 0 1 0 12"/>
+                    <path class="roro-sound-cross" d="m15 9 6 6m0-6-6 6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="roro-process-clip">
+              <video controls muted loop playsinline preload="none" width="320" height="568" poster="../assets/videos/the-roro/process-4.webp" aria-label="Process clip 4">
+                <source src="../assets/videos/the-roro/process-4.mp4" type="video/mp4">
+              </video>
+              <div class="roro-process-meta">
+                <button class="roro-sound-toggle" type="button" data-clip="4" aria-label="Unmute process clip 4" data-muted="true" hidden>
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                    <path d="M11 5 6 9H3v6h3l5 4z"/>
+                    <path class="roro-sound-waves" d="M15 9a4 4 0 0 1 0 6m3-9a8 8 0 0 1 0 12"/>
+                    <path class="roro-sound-cross" d="m15 9 6 6m0-6-6 6"/>
+                  </svg>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <nav class="related-projects next-project" aria-label="Next project">
+      <a href="audiovisual.html" class="related-card next-project-link">
+        <div>
+          <span class="related-card-title">Composing Audiovisual Space</span>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 5v14m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <p class="next-project-hint" hidden>Keep scrolling to continue</p>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Yueyi Lulu Wang</span>
+      <div class="footer-links">
+        <a href="mailto:lulu.yueyi.wang@gmail.com">Email</a>
+        <a href="https://github.com/luluwangyy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/roro.js?v=mars-autoplay" defer></script>
+  <script src="../js/main.js?v=make-indexed-layout-1"></script>
+  <script src="../js/next-project.js" defer></script>
+</body>
+</html>

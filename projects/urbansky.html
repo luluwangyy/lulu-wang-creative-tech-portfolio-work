@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>UrbanSky — Yueyi Lulu Wang</title>
+  <meta name="description" content="UrbanSky is a responsive 360° web explorer for a growing collection of more than 1,067 HDR lighting environments.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Averia+Serif+Libre:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css?v=next-project-arrow">
+</head>
+<body class="case-study urbansky-case">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="nav-morph">
+        <button type="button" class="nav-morph__trigger" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="nav-morph__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <nav class="segmented-control" aria-label="Primary" id="primary-nav">
+          <span class="segmented-control__pill" aria-hidden="true"></span>
+          <a href="../index.html" class="segmented-control__item">Home</a>
+          <a href="../make.html" class="segmented-control__item">Make</a>
+          <a href="../work.html" class="segmented-control__item">Work</a>
+          <a href="../play.html" class="segmented-control__item">Play</a>
+          <a href="../about.html" class="segmented-control__item">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="case-mobile-nav">
+      <button class="case-mobile-nav__trigger" type="button" aria-label="Open section navigation" aria-expanded="false" aria-controls="case-mobile-menu">
+        <span class="case-mobile-nav__index" aria-hidden="true">01</span>
+      </button>
+      <nav class="case-mobile-nav__menu" id="case-mobile-menu" aria-label="Case study sections">
+        <a class="is-active" href="#overview" aria-current="true"><span>01</span> Overview</a>
+        <a href="#demo"><span>02</span> Walkthrough</a>
+        <a href="#moments"><span>03</span> Engineering Moments</a>
+        <a href="#impact"><span>04</span> Outcome</a>
+        <a href="#reflection"><span>05</span> Takeaway</a>
+      </nav>
+    </div>
+
+    <div class="case-layout">
+      <aside class="case-rail" aria-label="UrbanSky case study navigation">
+        <div class="case-rail__sticky">
+          <a href="../work.html" class="case-back-link">← Back to Work</a>
+
+          <p class="case-rail__eyebrow">In this case study</p>
+          <nav class="case-nav" aria-label="On this page">
+            <a class="case-nav__link is-active" href="#overview" aria-current="true">Overview</a>
+            <a class="case-nav__link" href="#demo">Walkthrough</a>
+            <a class="case-nav__link" href="#moments">Engineering Moments</a>
+            <a class="case-nav__link" href="#impact">Outcome</a>
+            <a class="case-nav__link" href="#reflection">Takeaway</a>
+          </nav>
+
+          <div class="case-rail__actions" aria-label="Project links">
+            <a href="https://cave.cs.columbia.edu/repository/UrbanSky" target="_blank" rel="noopener">View Website ↗</a>
+          </div>
+
+          <dl class="case-rail__meta">
+            <div>
+              <dt>Role</dt>
+              <dd>Web Engineer</dd>
+            </div>
+            <div>
+              <dt>Skills</dt>
+              <dd>Full-stack engineering · responsive UI · data visualization</dd>
+            </div>
+            <div>
+              <dt>Tools</dt>
+              <dd>React · Node.js · Leaflet · PTGui</dd>
+            </div>
+            <div>
+              <dt>Dataset</dt>
+              <dd>1,067+ HDR environments</dd>
+            </div>
+            <div>
+              <dt>Time</dt>
+              <dd>Mar. 2025 – Jun. 2025</dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+
+      <article class="case-story">
+        <section class="case-section case-overview" id="overview" aria-labelledby="overview-label">
+          <figure class="case-front-image">
+            <img src="../assets/images/urbansky/cover.jpg" alt="UrbanSky interface showing HDR panoramas and their capture metadata">
+          </figure>
+          <h1>UrbanSky</h1>
+          <p class="case-kicker" id="overview-label">Overview</p>
+          <p class="case-statement case-statement--hero">UrbanSky turns a growing collection of <span class="case-accent">1,067+ HDR lighting environments</span> into an interactive 360° web explorer, helping researchers browse the dataset by location, time, and weather.</p>
+
+          <div class="case-role" aria-labelledby="role-title">
+            <p class="case-kicker" id="role-title">My Role</p>
+            <p class="case-role__summary">I worked as the <strong>Web Engineer</strong>, implementing the provided design within an existing Node.js architecture and building a responsive data-driven interface that can automatically accommodate new environments as the dataset continues to grow.</p>
+          </div>
+        </section>
+
+        <section class="case-section" id="demo" aria-labelledby="demo-label">
+          <p class="case-kicker" id="demo-label">Walkthrough</p>
+          <figure class="case-product-video urbansky-demo-video">
+            <video class="autoplay-loop" autoplay muted loop playsinline preload="auto" poster="../assets/images/urbansky/walkthrough.jpg">
+              <source src="../assets/videos/urbansky/walkthrough.mp4" type="video/mp4">
+            </video>
+          </figure>
+        </section>
+
+        <section class="case-section case-moments" id="moments" aria-labelledby="moments-label">
+          <p class="case-kicker" id="moments-label">Key Engineering Moments</p>
+
+          <article class="design-moment">
+            <header class="design-moment__header">
+              <span>01</span>
+              <h2>Turning raw captures into usable 360° panoramas</h2>
+            </header>
+
+            <div class="case-prose case-prose--moment">
+              <p>Before the environments could be explored in the browser, the source images had to be stitched into consistent panoramic assets.</p>
+              <p>I used PTGui to process and stitch the HDR captures into 360° panoramas, checking alignment, seams, and orientation before bringing them into the web experience.</p>
+            </div>
+
+            <p class="case-statement case-statement--spaced">The browser experience depended on more than the interface—it also depended on preparing <span class="case-accent">clean, consistent panoramic assets</span> upstream.</p>
+
+            <figure class="case-product-video">
+              <video class="autoplay-loop" autoplay muted loop playsinline preload="auto" poster="../assets/images/urbansky/ptgui-panorama.jpg" aria-label="A finished UrbanSky panorama displayed in PTGui">
+                <source src="../assets/videos/urbansky/ptgui-panorama.mp4" type="video/mp4">
+              </video>
+            </figure>
+          </article>
+
+          <article class="design-moment">
+            <header class="design-moment__header">
+              <span>02</span>
+              <h2>Making a large dataset explorable through the map</h2>
+            </header>
+
+            <div class="case-prose case-prose--moment">
+              <p>With <strong>1,067+ environments</strong>, a simple list or gallery would quickly become hard to navigate.</p>
+              <p>I built the map as a primary exploration layer so researchers could browse captures spatially, understand where each environment came from, and jump directly into a panorama from its location.</p>
+            </div>
+
+            <p class="case-statement case-statement--spaced">The map turns a large dataset from something you <span class="case-accent">search through</span> into something you can <span class="case-accent">explore</span>.</p>
+
+            <div class="case-prose">
+              <p>Each map point is connected to its corresponding panorama and metadata, so location becomes part of the browsing experience rather than just another field in a table.</p>
+            </div>
+
+            <figure class="case-product-video">
+              <video class="autoplay-loop" autoplay muted loop playsinline preload="auto" poster="../assets/images/urbansky/cover.jpg">
+                <source src="../assets/videos/urbansky/content.mp4" type="video/mp4">
+              </video>
+            </figure>
+
+            <p class="case-bridge-copy">As the dataset grows, new entries can appear within the same map-based structure without changing the overall interaction model.</p>
+          </article>
+
+          <article class="design-moment">
+            <header class="design-moment__header">
+              <span>03</span>
+              <h2>Dynamic dataset loading</h2>
+            </header>
+
+            <div class="case-prose case-prose--moment">
+              <p>The current dataset contains <strong>1,067 environments</strong>, but the interface is not designed around that number.</p>
+            </div>
+
+            <figure class="case-product-video">
+              <video class="autoplay-loop" autoplay muted loop playsinline preload="auto" poster="../assets/images/urbansky/cover.jpg">
+                <source src="../assets/videos/urbansky/front.mp4" type="video/mp4">
+              </video>
+            </figure>
+
+            <p class="case-statement case-statement--spaced">Whether the dataset contains <span class="case-accent">1,067 environments or many more</span>, new entries can flow into the same responsive structure without requiring new pages or layout changes.</p>
+
+            <div class="case-prose">
+              <p>New panorama and metadata entries are loaded through the same data structure and rendered through reusable components, so the browsing, filtering, and 360° viewing experience continues to work as the collection expands.</p>
+            </div>
+
+            <div class="future-map case-reveal" aria-label="How new UrbanSky environments flow into the interface">
+              <span>New environment</span>
+              <i aria-hidden="true">→</i>
+              <span>Dataset</span>
+              <i aria-hidden="true">→</i>
+              <span>Reusable components</span>
+              <i aria-hidden="true">→</i>
+              <span>Existing responsive interface</span>
+            </div>
+          </article>
+        </section>
+
+        <section class="case-section" id="impact" aria-labelledby="impact-label">
+          <p class="case-kicker" id="impact-label">Outcome</p>
+
+          <div class="impact-metrics">
+            <div>
+              <strong>1,067+</strong>
+              <span>current HDR environments—and growing</span>
+            </div>
+            <div class="impact-metric--copy">
+              <strong>Dynamic</strong>
+              <span>new entries automatically fit the existing interface</span>
+            </div>
+            <div>
+              <strong>360°</strong>
+              <span>interactive exploration</span>
+            </div>
+            <div class="impact-metric--copy">
+              <strong>Full-stack</strong>
+              <span>React + Node.js implementation</span>
+            </div>
+          </div>
+
+          <div class="impact-actions">
+            <a href="https://cave.cs.columbia.edu/repository/UrbanSky" target="_blank" rel="noopener">View Website ↗</a>
+          </div>
+        </section>
+
+        <section class="case-section" id="reflection" aria-labelledby="reflection-label">
+          <p class="case-kicker" id="reflection-label">Takeaway</p>
+          <p class="case-final-statement">UrbanSky taught me that building for a <span class="case-accent">large dataset</span> means designing not just for the data you have now, but for how the system will keep growing.</p>
+        </section>
+      </article>
+    </div>
+
+    <nav class="related-projects next-project" aria-label="Next project">
+      <a href="ai-storytelling.html" class="related-card next-project-link">
+        <div>
+          <span class="related-card-title">Generative AI &amp; Storytelling</span>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 5v14m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <p class="next-project-hint" hidden>Keep scrolling to continue</p>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Yueyi Lulu Wang</span>
+      <div class="footer-links">
+        <a href="mailto:lulu.yueyi.wang@gmail.com">Email</a>
+        <a href="https://github.com/luluwangyy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=media-autoplay-1"></script>
+  <script src="../js/next-project.js" defer></script>
+</body>
+</html>

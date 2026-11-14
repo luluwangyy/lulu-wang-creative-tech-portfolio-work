@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c0f">
+  <title>How to Make the Air Obey – Light Program | Yueyi Lulu Wang</title>
+  <meta name="description" content="An interactive lighting program by Yueyi Lulu Wang that connects audience gestures and speech to the ETC Eos console at Barnard’s Movement Lab.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;family=Averia+Serif+Libre:ital,wght@0,300;1,300&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css?v=next-project-arrow">
+  <style>
+    .light-magic-overview { margin-top: 0; }
+    .light-magic-video video {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      border-radius: 0.5rem;
+      background: #000;
+    }
+    #in-lab-test-1 video { max-width: 25rem; }
+    .light-magic-diagrams .project-visual { display: block; }
+  </style>
+</head>
+<body class="make-project make-project--indexed">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="nav-morph">
+        <button type="button" class="nav-morph__trigger" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="nav-morph__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <nav class="segmented-control" aria-label="Primary" id="primary-nav">
+          <span class="segmented-control__pill" aria-hidden="true"></span>
+          <a href="../index.html" class="segmented-control__item">Home</a>
+          <a href="../work.html" class="segmented-control__item">Work</a>
+          <a href="../play.html" class="segmented-control__item">Play</a>
+          <a href="../about.html" class="segmented-control__item">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="project-detail-hero">
+      <a href="../make.html" class="back-link">&larr; Back to Make</a>
+      <h1>How to Make the Air Obey – Light Program</h1>
+      <p class="project-subtitle">Lighting Designer &amp; Creative Technologist</p>
+    </section>
+
+    <div class="project-detail-split">
+      <nav class="project-toc" aria-label="On this page">
+        <p class="project-toc__label">Contents</p>
+        <ul class="project-toc__list">
+          <li><a class="project-toc__link" href="#overview">Overview</a></li>
+          <li><a class="project-toc__link" href="#rehearsal-demo">Rehearsal demo</a></li>
+          <li><a class="project-toc__link" href="#in-lab-test-1">In-lab test 1</a></li>
+          <li><a class="project-toc__link" href="#system-architecture">System architecture</a></li>
+          <li><a class="project-toc__link" href="#discussion">Discussion</a></li>
+          <li><a class="project-toc__link" href="#how-to-use">How to use Light Magic</a></li>
+        </ul>
+      </nav>
+      <article class="project-detail-body">
+        <section id="overview" class="project-section light-magic-overview" aria-labelledby="overview-title">
+          <h2 id="overview-title">Overview</h2>
+          <p>I joined Liz Magic Laser and Ruth Estévez as a lighting designer during their Fall 2026 residency at <a href="https://movement.barnard.edu/artists-residence">Barnard’s Movement Lab</a>. During the experimental phase, I proposed an interactive lighting system that uses computer vision to recognize gestures and speech recognition to detect spoken phrases. The app translates audience movement and voice into commands for the lab’s ETC Eos console, which drives the stage fixtures.</p>
+          <p>The project draws on <a href="https://601artspace.org/Personal-Power-Moves"><em>Power Moves</em></a>, Liz Magic Laser’s collaboration with choreographer Cori Kresge. The work treats political gesticulation as a whole-body act of persuasion. The hands shape and deliver a message that can steady a room or unsettle it, reveal something or keep it hidden. In the lab, a gesture or a spoken phrase can work like an incantation. An open palm reveals the room. A fist sends it into darkness.</p>
+        </section>
+
+        <section id="rehearsal-demo" class="project-section light-magic-video" aria-labelledby="rehearsal-title">
+          <h2 id="rehearsal-title">Rehearsal demo</h2>
+          <p>A screen recording of Light Magic in rehearsal. Try gestures and voice commands in your browser with simulated stage lighting.</p>
+          <video controls playsinline preload="metadata" width="1812" height="1080" aria-label="Light Magic interface rehearsal demo">
+            <source src="../assets/videos/light-magic/rehearsal-demo.mp4?v=reduced-noise" type="video/mp4">
+            <a href="../assets/videos/light-magic/rehearsal-demo.mp4?v=reduced-noise">Watch the rehearsal video</a>
+          </video>
+          <div class="link-button-row">
+            <a class="link-button" href="https://luluwangyy.github.io/light-magic-site/try/">Try the browser rehearsal <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
+
+        <section id="in-lab-test-1" class="project-section light-magic-video" aria-labelledby="lab-test-title">
+          <h2 id="lab-test-title">In-lab test 1</h2>
+          <p>The first in-lab test of Light Magic, recorded with Version 1.</p>
+          <video controls playsinline preload="metadata" width="720" height="1280" aria-labelledby="lab-test-title">
+            <source src="../assets/videos/light-magic/in-lab-test-1.mp4" type="video/mp4">
+            <a href="../assets/videos/light-magic/in-lab-test-1.mp4">Watch the in-lab test</a>
+          </video>
+        </section>
+
+        <section id="system-architecture" class="project-section light-magic-diagrams" aria-labelledby="architecture-title">
+          <h2 id="architecture-title">System architecture</h2>
+          <p>The browser recognizes gestures from camera input. In a shared session, it sends microphone audio over private HTTPS to the bridge for offline speech recognition. The bridge checks the mapping and live state before sending an OSC command over TCP. ETC Eos applies the venue’s fixture patch to drive the lights.</p>
+
+          <figure>
+            <a class="project-visual visual-auto" href="../assets/images/light-magic/system-overview.png">
+              <img src="../assets/images/light-magic/system-overview.png" width="1600" height="900" loading="lazy" alt="The performer sends gestures or speech through a browser and bridge PC to the Eos console and stage fixtures. The operator controls live output, and a separate browser rehearsal simulates lighting.">
+            </a>
+          </figure>
+
+          <figure>
+            <a class="project-visual visual-auto" href="../assets/images/light-magic/control-and-data-path.png">
+              <img src="../assets/images/light-magic/control-and-data-path.png" width="1600" height="900" loading="lazy" alt="Camera recognition and microphone capture feed the bridge. The bridge looks up a saved mapping and checks live output before sending OSC over TCP. Eos resolves the fixture patch. Examples show an open palm mapped to a cue and a spoken phrase mapped to a channel level.">
+            </a>
+          </figure>
+        </section>
+
+        <section id="discussion" class="project-section" aria-labelledby="discussion-title">
+          <h2 id="discussion-title">Discussion</h2>
+          <p>The program establishes a workflow that other Movement Lab artists can adapt to their own shows. Each artist can choose the movements and phrases that belong in the piece, map them to lighting actions, and rehearse those mappings before running them on the console.</p>
+          <p>I’m also exploring how to make ETC Eos more approachable for artists who are new to lighting programming. One direction is a simpler interface for building and testing lighting looks. Another is using a language model to turn a plain-language description into draft Eos cues or channel settings that an artist can review, adjust, and rehearse.</p>
+        </section>
+
+        <section id="how-to-use" class="project-section" aria-labelledby="usage-title">
+          <h2 id="usage-title">How to use Light Magic</h2>
+          <div class="link-button-row">
+            <a class="link-button" href="https://github.com/luluwangyy/light-magic-site/blob/main/README.md">Read the instructions on GitHub <span aria-hidden="true">↗</span></a>
+          </div>
+        </section>
+      </article>
+    </div>
+
+    <nav class="related-projects next-project" aria-label="Next project">
+      <a href="lighting-experiments.html" class="related-card next-project-link">
+        <div>
+          <span class="related-card-title">Lighting Design Experiments</span>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M12 5v14m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <p class="next-project-hint" hidden>Keep scrolling to continue</p>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Yueyi Lulu Wang</span>
+      <div class="footer-links">
+        <a href="mailto:lulu.yueyi.wang@gmail.com">Email</a>
+        <a href="https://github.com/luluwangyy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=ui-sound-2"></script>
+  <script src="../js/next-project.js" defer></script>
+</body>
+</html>

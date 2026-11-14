@@ -1,0 +1,126 @@
+.stand-still-intro {
+  padding-top: clamp(2rem, 5vw, 4rem);
+  padding-bottom: 2.5rem;
+}
+
+.stand-still-intro .section-label {
+  margin-bottom: 0.9rem;
+  color: #e3a6dc;
+}
+
+.stand-still-intro h1 {
+  max-width: 23ch;
+  font-size: clamp(2.5rem, 5.5vw, 4.5rem);
+}
+
+.stand-still-description {
+  margin-top: 1rem;
+  max-width: 50ch;
+  line-height: 1.65;
+}
+
+.stand-still-hero,
+.stand-still-section,
+.stand-still-return {
+  max-width: var(--content-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.stand-still-hero img,
+.stand-still-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.stand-still-hero a,
+.stand-still-gallery a {
+  display: block;
+}
+
+.stand-still-hero figcaption {
+  margin-top: 0.8rem;
+  color: var(--color-text-muted);
+  font-size: 0.75rem;
+}
+
+.stand-still-section {
+  margin-top: clamp(3.5rem, 7vw, 6rem);
+}
+
+.stand-still-stills {
+  margin-top: 0;
+}
+
+.stand-still-section h2 {
+  font-family: var(--font-serif-highlight);
+  font-size: clamp(1.65rem, 3vw, 2.4rem);
+  font-style: italic;
+  font-weight: 300;
+}
+
+.stand-still-section__heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.75rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.stand-still-section__heading p {
+  font-size: 0.8rem;
+}
+
+.stand-still-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.stand-still-gallery__wide {
+  grid-column: 1 / -1;
+}
+
+.stand-still-credits {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+.stand-still-credits dl > div {
+  display: grid;
+  grid-template-columns: 9rem minmax(0, 1fr);
+  gap: 1.25rem;
+  padding-block: 1rem;
+  border-top: 1px solid var(--color-border);
+  font-size: 0.9rem;
+  line-height: 1.65;
+}
+
+.stand-still-credits dt {
+  color: var(--color-text-muted);
+}
+
+.stand-still-return {
+  padding-top: 4rem;
+}
+
+@media (max-width: 700px) {
+  .stand-still-gallery,
+  .stand-still-credits {
+    grid-template-columns: 1fr;
+  }
+
+  .stand-still-gallery { gap: 1rem; }
+  .stand-still-credits { gap: 1.5rem; }
+}
+
+@media (max-width: 420px) {
+  .stand-still-credits dl > div {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+}

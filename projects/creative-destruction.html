@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c0f">
+  <title>Movement Lab Student Artist in Residence — Yueyi Lulu Wang</title>
+  <meta name="description" content="Movement Lab Student Artist in Residence investigates how bodily input and response timing shape participation in robotic environments.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Averia+Serif+Libre:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css?v=next-project-arrow">
+  <link rel="stylesheet" href="../css/creative-destruction.css?v=related-projects-2">
+</head>
+<body class="make-project make-project--indexed">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="nav-morph">
+        <button type="button" class="nav-morph__trigger" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="nav-morph__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <nav class="segmented-control" aria-label="Primary" id="primary-nav">
+          <span class="segmented-control__pill" aria-hidden="true"></span>
+          <a href="../index.html" class="segmented-control__item">Home</a>
+          <a href="../make.html" class="segmented-control__item">Make</a>
+          <a href="../work.html" class="segmented-control__item">Work</a>
+          <a href="../play.html" class="segmented-control__item">Play</a>
+          <a href="../about.html" class="segmented-control__item">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="project-detail-visual">
+      <div class="project-visual">
+        <img src="../assets/images/creative-destruction/cover.png" alt="Movement Lab Student Artist in Residence">
+      </div>
+    </div>
+
+    <section class="project-detail-hero">
+      <a href="../make.html" class="back-link">&larr; Back to Make</a>
+      <h1>Movement Lab Student Artist in Residence</h1>
+      <p class="project-subtitle">Investigating how bodily input and response timing shape participation in robotic environments.</p>
+
+      <dl class="project-meta project-meta--horizontal" aria-label="Project details">
+        <div>
+          <dt class="meta-label">Affiliation</dt>
+          <dd class="meta-value">Barnard Movement Lab</dd>
+        </div>
+        <div>
+          <dt class="meta-label">Type</dt>
+          <dd class="meta-value">Interactive Performance and Installation</dd>
+        </div>
+        <div>
+          <dt class="meta-label">Role</dt>
+          <dd class="meta-value">Student Artist in Residence</dd>
+        </div>
+        <div>
+          <dt class="meta-label">Duration</dt>
+          <dd class="meta-value">October 2025–April 2026</dd>
+        </div>
+        <div>
+          <dt class="meta-label">Tools</dt>
+          <dd class="meta-value">Python · Custom Robotics · ETC Eos · QLab · OSC · Raspberry Pi · ESP32</dd>
+        </div>
+      </dl>
+    </section>
+
+    <div class="project-detail-split">
+      <nav class="project-toc" aria-label="On this page">
+        <p class="project-toc__label">Contents</p>
+        <ul class="project-toc__list">
+          <li><a class="project-toc__link" href="#context">Context</a></li>
+          <li><a class="project-toc__link" href="#response-timing">Response Timing</a></li>
+          <li><a class="project-toc__link" href="#public-show">Public-facing show</a></li>
+          <li><a class="project-toc__link" href="#conceptual-framework">Conceptual Framework</a></li>
+          <li><a class="project-toc__link" href="#technical-documentation">Tech Documentation</a></li>
+          <li><a class="project-toc__link" href="#touch-extension">Re-adapting in Prentis Art Show</a></li>
+          <li><a class="project-toc__link" href="#outcome">Outcome</a></li>
+        </ul>
+      </nav>
+
+      <section class="project-detail-body">
+        <div class="project-section" id="context">
+          <h2>Context</h2>
+          <p>
+            I was one of Barnard Movement Lab’s Student Artists in Residence during the 2025–26
+            academic year. This two-semester, process-oriented, research-driven program brings
+            artists, technologists, musicians, and dancers together to explore intersections among
+            movement, technology, and performance.
+          </p>
+          <p>
+            During the residency, I became interested in the interactive potential of the lab’s
+            theatrical lighting system and in connecting sensors, the lighting console, and custom
+            robotic components. I developed a series of experiments linking audience input to a
+            custom robotic tentacle and the lab’s lighting system. These experiments allowed me to
+            investigate interaction at two scales: the movement of an individual mechanical body
+            and changes across the surrounding room.
+          </p>
+        </div>
+
+        <div class="project-section" id="response-timing">
+          <h2>Prototype: Immediate and Accumulated Responses</h2>
+          <p>
+            In the first configuration, Python-based sound detection identifies a clap and triggers
+            the tentacle’s crawling movement. This establishes a direct relationship between an
+            acoustic event and a visible mechanical response.
+          </p>
+          <div class="project-visual">
+            <button type="button" class="video-facade" style="background-image:url('https://img.youtube.com/vi/4R0qSw57JNY/hqdefault.jpg')" data-embed-src="https://www.youtube.com/embed/4R0qSw57JNY?autoplay=1&amp;rel=0" data-embed-title="Sound to Robotic Movement" data-embed-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" aria-label="Play video: Sound to Robotic Movement">
+              <span class="video-facade-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
+          </div>
+          <p>
+            I then connected the system to the ETC Eos lighting console. Each clap changes the light
+            color. On the thirteenth clap, the light turns red, its zoom reaches 100%, and the robotic
+            tentacle begins to move.
+          </p>
+          <div class="project-visual">
+            <button type="button" class="video-facade" style="background-image:url('https://img.youtube.com/vi/urj86VMSwUk/hqdefault.jpg')" data-embed-src="https://www.youtube.com/embed/urj86VMSwUk?autoplay=1&amp;rel=0" data-embed-title="Sound to Robotic Movement and Lighting" data-embed-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" aria-label="Play video: Sound to Robotic Movement and Lighting">
+              <span class="video-facade-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
+          </div>
+          <p>
+            The second configuration makes timing part of the encounter. Lighting registers
+            successive actions while the robot remains still until the threshold is reached. This
+            provides a setting for investigating anticipation, discoverability, and how people
+            revise their actions as they encounter a system’s behavior.
+          </p>
+          <p class="media-note">For the development of the robotic mechanism, see <a href="the-roro.html"><em>The Roro</em></a>.</p>
+        </div>
+
+        <div class="project-section" id="public-show">
+          <h2>Public-facing show</h2>
+          <p>
+            The research culminated in a participatory performance-installation. Audience members
+            interact with my custom-built <a href="tactone.html">Tactone instrument</a> and use
+            touch and clapping to trigger a choreographed robotic performance with theatrical
+            lighting.
+          </p>
+          <div class="residency-media-grid">
+            <figure>
+              <div class="project-visual visual-auto">
+                <video controls playsinline preload="metadata" width="1920" height="1080" poster="../assets/images/creative-destruction/public-show-1.jpg" aria-label="Public-facing show: audience participation with Tactone">
+                  <source src="../assets/videos/creative-destruction/public-show-1.mp4" type="video/mp4">
+                  <a href="../assets/videos/creative-destruction/public-show-1.mp4">Watch the audience participation video</a>
+                </video>
+              </div>
+              <figcaption class="media-caption">Video 1 — Audience members activate Tactone, the tangible musical instrument I designed and built.</figcaption>
+            </figure>
+            <figure>
+              <div class="project-visual visual-auto">
+                <video controls playsinline preload="metadata" width="1920" height="1080" poster="../assets/images/creative-destruction/public-show-highlights.jpg" aria-label="Public-facing show: performance highlights">
+                  <source src="../assets/videos/creative-destruction/public-show-highlights.mp4" type="video/mp4">
+                  <a href="../assets/videos/creative-destruction/public-show-highlights.mp4">Watch the performance highlights</a>
+                </video>
+              </div>
+              <figcaption class="media-caption">Video 2 — Public-facing show highlights.</figcaption>
+            </figure>
+          </div>
+          <p class="media-note"><a href="tactone.html">See how I built Tactone &rarr;</a></p>
+        </div>
+
+        <div class="project-section" id="conceptual-framework">
+          <h2>Conceptual framework</h2>
+          <p>Reading notes on embodied interaction, light as an artistic medium, and the relationship between color and sound.</p>
+          <div class="residency-media-grid">
+            <figure>
+              <a href="../assets/images/creative-destruction/conceptual-embodied-interaction.png" target="_blank" rel="noopener" aria-label="Read embodied interaction notes at full size (opens in a new tab)">
+                <img class="residency-note-image" src="../assets/images/creative-destruction/conceptual-embodied-interaction.png" width="1498" height="1242" alt="Reading notes on Paul Dourish’s embodied interaction: ready-to-hand and present-at-hand, action, and meaning" loading="lazy" decoding="async">
+              </a>
+              <figcaption class="media-caption">Paul Dourish — embodied interaction.</figcaption>
+            </figure>
+            <figure>
+              <a href="../assets/images/creative-destruction/conceptual-light-colour.png" target="_blank" rel="noopener" aria-label="Read light, color, and sound notes at full size (opens in a new tab)">
+                <img class="residency-note-image" src="../assets/images/creative-destruction/conceptual-light-colour.png" width="1489" height="1150" alt="Reading notes on Stephen Eskilson’s Thomas Wilfred and Intermedia and Crétien van Campen’s Synesthesia and Artistic Experimentation" loading="lazy" decoding="async">
+              </a>
+              <figcaption class="media-caption">Stephen Eskilson and Crétien van Campen — light, color, and sound.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section" id="technical-documentation">
+          <h2>Tech documentation</h2>
+          <p>Selected tests and setup notes from my <a href="https://800828.cargo.site/" target="_blank" rel="noopener">2025–26 Movement Lab residency journal</a>, connecting touch sensing, software cues, projection, and theatrical lighting.</p>
+
+          <h3>Touch sensor, QLab, and Eos</h3>
+          <p class="residency-doc-date">4 March 2026</p>
+          <p>A two-laptop setup connects the ESP32 touch sensor to sound and lighting. Laptop B reads the sensor over USB serial and sends an OSC message over Wi-Fi. Laptop A receives that message, triggers a QLab cue through <code>osascript</code>, and sends an OSC lighting cue over Ethernet to the ETC Eos console.</p>
+          <figure>
+            <div class="project-visual">
+              <button type="button" class="video-facade" style="background-image:url('https://img.youtube.com/vi/tL3iKptECVc/hqdefault.jpg')" data-embed-src="https://www.youtube.com/embed/tL3iKptECVc?autoplay=1&amp;rel=0" data-embed-title="Touch Sensor, QLab, and Lighting Console" data-embed-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" aria-label="Play video: Touch Sensor, QLab, and Lighting Console">
+                <span class="video-facade-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+              </button>
+            </div>
+            <figcaption class="media-caption">Touch-sensor input triggers QLab and the lighting console.</figcaption>
+          </figure>
+          <p class="media-note"><a href="https://www.notion.so/Touch-Sensor-QLab-Lighting-Console-3-4-works-3193158f0df780fc8be8d1b3b200b3ee" target="_blank" rel="noopener">Touch-sensor setup notes &rarr;</a></p>
+
+          <h3>Python-triggered cues</h3>
+          <p class="residency-doc-date">30 January–5 February 2026</p>
+          <p>These tests connect local Python input to QLab and the Eos console, including a smile-detection trigger. The networking notes record a small but important detail: the QLab OSC address needs the leading slash in <code>/eos/cue/{cue number}/fire</code>.</p>
+          <div class="residency-media-grid">
+            <figure>
+              <div class="project-visual">
+                <button type="button" class="video-facade" style="background-image:url('https://img.youtube.com/vi/HynQeR6lPyU/hqdefault.jpg')" data-embed-src="https://www.youtube.com/embed/HynQeR6lPyU?autoplay=1&amp;rel=0" data-embed-title="Firing an ETC Lighting Cue Through QLab" data-embed-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" aria-label="Play video: Firing an ETC Lighting Cue Through QLab">
+                  <span class="video-facade-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+                </button>
+              </div>
+              <figcaption class="media-caption">Firing an ETC lighting cue through code via QLab.</figcaption>
+            </figure>
+            <figure>
+              <div class="project-visual">
+                <button type="button" class="video-facade" style="background-image:url('https://img.youtube.com/vi/0LtHfLvud5Q/hqdefault.jpg')" data-embed-src="https://www.youtube.com/embed/0LtHfLvud5Q?autoplay=1&amp;rel=0" data-embed-title="Smile Detection, QLab, and an ETC Lighting Cue" data-embed-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" aria-label="Play video: Smile Detection, QLab, and an ETC Lighting Cue">
+                  <span class="video-facade-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+                </button>
+              </div>
+              <figcaption class="media-caption">A smile-detection test triggers lighting through QLab.</figcaption>
+            </figure>
+          </div>
+          <p class="media-note"><a href="https://www.notion.so/Network-QLab-to-ETC-s-console-1-2f93158f0df780529cb8d149413d8134" target="_blank" rel="noopener">QLab and Eos networking notes &rarr;</a><br><a href="https://www.notion.so/Triggering-Qlab-cue-through-local-python-code-1-2f93158f0df7802e8117e1f0c2cf2957" target="_blank" rel="noopener">Python cue-trigger notes &rarr;</a></p>
+
+          <h3>Two-screen projection</h3>
+          <p class="residency-doc-date">5 February 2026</p>
+          <p>I configured a 3840 × 1080 QLab stage with two regions, using values from the lab’s existing QLab file created by Guy and shared through Mimi. The setup notes flag checking the spacing between projected images with the projector remote before the showcase.</p>
+          <figure>
+            <a class="project-visual visual-auto" href="../assets/images/creative-destruction/qlab-projection-setup.jpg" target="_blank" rel="noopener" aria-label="View the QLab projection setup at full size (opens in a new tab)">
+              <img src="../assets/images/creative-destruction/qlab-projection-setup.jpg" width="1500" height="1125" alt="QLab multi-screen stage settings showing a 3840 by 1080 stage, two regions, and projector output routes" loading="lazy" decoding="async">
+            </a>
+            <figcaption class="media-caption">QLab stage regions and output routing from the residency journal.</figcaption>
+          </figure>
+
+          <h3>Projection and lighting design</h3>
+          <p class="residency-doc-date">Fall 2025–February 2026</p>
+          <p>I explored step-based lighting effects and an inviting introductory light sequence, recorded in the journal as Effect 1050 on 19 February. These studies test how light can draw an audience into the space and how touch can change the lighting.</p>
+          <div class="residency-media-grid">
+            <figure>
+              <div class="project-visual">
+                <button type="button" class="video-facade" style="background-image:url('https://img.youtube.com/vi/Dw01lZnGJB8/hqdefault.jpg')" data-embed-src="https://www.youtube.com/embed/Dw01lZnGJB8?autoplay=1&amp;rel=0" data-embed-title="Lighting Design — Inviting" data-embed-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" aria-label="Play video: Lighting Design — Inviting">
+                  <span class="video-facade-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+                </button>
+              </div>
+              <figcaption class="media-caption">An inviting light sequence using a step-based effect.</figcaption>
+            </figure>
+            <figure>
+              <div class="project-visual">
+                <button type="button" class="video-facade" style="background-image:url('https://img.youtube.com/vi/mQHkjRCIU84/hqdefault.jpg')" data-embed-src="https://www.youtube.com/embed/mQHkjRCIU84?autoplay=1&amp;rel=0" data-embed-title="Touch and Lighting Test" data-embed-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" aria-label="Play video: Touch and Lighting Test">
+                  <span class="video-facade-play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg></span>
+                </button>
+              </div>
+              <figcaption class="media-caption">A touch-to-light interaction test.</figcaption>
+            </figure>
+          </div>
+        </div>
+
+        <div class="project-section" id="touch-extension">
+          <h2>Re-adapting in Prentis Art Show</h2>
+          <div class="project-visual">
+            <button type="button" class="video-facade" data-embed-src="https://player.vimeo.com/video/1195036035?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" data-embed-title="Tactone and Robotics — Combined Interaction" data-embed-allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" data-embed-referrer="strict-origin-when-cross-origin" aria-label="Play video: Tactone and Robotics — Combined Interaction">
+              <span class="video-facade-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+            </button>
+          </div>
+          <p class="media-caption">A designated sequence played on the ceramic instrument triggers movement in the robotic mechanism.</p>
+        </div>
+
+        <div class="project-section" id="outcome">
+          <h2>Current Outcome and Further Inquiry</h2>
+          <p>
+            The project establishes working configurations connecting bodily input, robotic
+            actuation, and theatrical lighting. Further investigation could examine how
+            participants discover the mappings, attribute changes to their actions, and coordinate
+            with others.
+          </p>
+          <p>
+            The central inquiry is how a responsive environment makes participation understandable:
+            what people can influence, how that influence becomes visible, and how the encounter
+            changes as they learn.
+          </p>
+        </div>
+      </section>
+    </div>
+
+    <nav class="related-projects next-project" aria-label="Next project">
+      <a href="even-when-you-stand-still.html" class="related-card next-project-link">
+        <div>
+          <span class="related-card-title">Even When You Stand Still (Collaboration)</span>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 5v14m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <p class="next-project-hint" hidden>Keep scrolling to continue</p>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Yueyi Lulu Wang</span>
+      <div class="footer-links">
+        <a href="mailto:lulu.yueyi.wang@gmail.com">Email</a>
+        <a href="https://github.com/luluwangyy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=make-indexed-layout-1"></script>
+  <script src="../js/next-project.js" defer></script>
+</body>
+</html>

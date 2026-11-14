@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c0f">
+  <title>Tactone — Yueyi Lulu Wang</title>
+  <meta name="description" content="Tactone is a touch-responsive ceramic instrument exploring form, spatially arranged contacts, and musical interaction.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&amp;family=Averia+Serif+Libre:ital,wght@0,300;1,300&amp;family=Source+Code+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css?v=next-project-arrow">
+</head>
+<body class="project-detail-page make-project make-project--indexed">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <nav class="segmented-control" aria-label="Primary">
+        <span class="segmented-control__pill" aria-hidden="true"></span>
+        <a href="../index.html" class="segmented-control__item">Home</a>
+        <a href="../make.html" class="segmented-control__item is-active" aria-current="page">Make</a>
+        <a href="../work.html" class="segmented-control__item">Work</a>
+        <a href="../play.html" class="segmented-control__item">Play</a>
+        <a href="../about.html" class="segmented-control__item">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="project-detail-visual">
+      <div class="project-visual">
+        <img src="../assets/images/tactone/cover.png" alt="Two views of hands interacting with the Tactone ceramic instrument under violet stage lighting">
+      </div>
+    </div>
+
+    <section class="project-detail-hero">
+      <a href="../make.html" class="back-link">&larr; Back to Make</a>
+      <h1>Tactone</h1>
+      <p class="project-subtitle">Investigating ceramic form as an interface for bodily exploration and electronic sound.</p>
+
+      <dl class="project-meta project-meta--horizontal" aria-label="Project details">
+        <div>
+          <dt class="meta-label">Type</dt>
+          <dd class="meta-value">Tangible Musical Interface</dd>
+        </div>
+        <div>
+          <dt class="meta-label">Role</dt>
+          <dd class="meta-value">Artist-Technologist</dd>
+        </div>
+        <div>
+          <dt class="meta-label">Duration</dt>
+          <dd class="meta-value">2025–2026</dd>
+        </div>
+        <div>
+          <dt class="meta-label">Tools</dt>
+          <dd class="meta-value">Ceramic Fabrication · Copper Tape · ESP32 · Custom Software · Sound Synthesis</dd>
+        </div>
+      </dl>
+    </section>
+
+    <div class="project-detail-split">
+      <nav class="project-toc" aria-label="On this page">
+        <p class="project-toc__label">Contents</p>
+        <ul class="project-toc__list">
+          <li><a class="project-toc__link" href="#overview">Overview</a></li>
+          <li><a class="project-toc__link" href="#context">Context</a></li>
+          <li><a class="project-toc__link" href="#form-and-construction">Form and Construction</a></li>
+          <li><a class="project-toc__link" href="#interaction-and-sound">Interaction and Sound</a></li>
+          <li><a class="project-toc__link" href="#next-steps">Next Steps</a></li>
+          <li><a class="project-toc__link" href="#process">Process</a></li>
+        </ul>
+      </nav>
+
+      <section class="project-detail-body">
+        <div class="project-section" id="overview">
+          <h2>Overview</h2>
+          <p>
+            Tactone is a ceramic vessel that functions as a touch-based electronic instrument.
+            Five copper contacts on its surface each trigger a synthesized note, and a specific
+            sequence of touches changes the waveform. Visitors learn how it works by playing it.
+            The project asks how the physical form of an electronic instrument shapes the gestures
+            people use to discover and play it.
+          </p>
+
+          <div class="project-visual">
+            <button
+              type="button"
+              class="video-facade"
+              style="background-image:url('https://img.youtube.com/vi/_-lUSP3zuBE/hqdefault.jpg')"
+              data-embed-src="https://www.youtube.com/embed/_-lUSP3zuBE?autoplay=1&amp;rel=0"
+              data-embed-title="Tactone — Touch-to-Sound Demonstration"
+              data-embed-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              aria-label="Play video: Tactone touch-to-sound demonstration">
+              <span class="video-facade-play" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <div class="project-section" id="context">
+          <h2>Context</h2>
+          <p>
+            Tactone draws on two traditions of making sound through touch. The handpan, a
+            dish-shaped instrument played with the hands, produces resonant tones when its surface
+            is struck and tapped. Ceramic makers likewise tap the walls of a vessel to shape its
+            texture and tone. In both, the player learns the object by touching it and listening to
+            the response.
+          </p>
+          <p>
+            I wanted to extend this relationship with electronic sound, using a handmade vessel as
+            the interface and designing it so that several people could play together.
+          </p>
+        </div>
+
+        <div class="project-section" id="form-and-construction">
+          <h2>Form and Construction</h2>
+          <p>
+            The vessel was coil-built by hand, then glazed and fired. Coiling allowed me to control
+            the form gradually and gave the surface a tactile quality suited to repeated touch. Five
+            copper-tape contacts are applied to the glazed surface and soldered to the touch pins of
+            an ESP32 housed inside the vessel. The ceramic provides structure and an insulating
+            surface, and the copper defines the points of contact. Because each note has a fixed
+            position, playing a melody requires the hand to move around the vessel, so the
+            arrangement of contacts directly shapes the gesture.
+          </p>
+
+          <figure class="editorial-figure">
+            <img
+              src="../assets/images/tactone/structure-diagram.jpg?v=dark-2"
+              alt="Cutaway structure diagram of Tactone showing the removable lid, copper-tape sensing interface, internal wiring, ESP32 touch inputs, USB serial or wireless connection, and speaker assembly."
+              width="1760"
+              height="1314"
+              style="width: 100%; height: auto;"
+              loading="lazy"
+              decoding="async">
+          </figure>
+        </div>
+
+        <div class="project-section" id="interaction-and-sound">
+          <h2>Interaction and Sound</h2>
+          <p>
+            The five contacts correspond to five notes. A designated touch sequence (do, re, mi,
+            fa, sol) changes the synthesized waveform between sine, sawtooth, and triangle. Visitors
+            first associate each location with a pitch. They then discover that the order of their
+            touches can alter the sound, which allows a second layer of the instrument to emerge
+            through use.
+          </p>
+
+          <figure class="tactone-flow-figure">
+            <img
+              src="../assets/images/tactone/general-interaction-flow.png"
+              alt="Tactone interaction flow: ceramic keys are sensed by an ESP32, touch events travel over USB Serial to browser audio and speakers, while note sequences change tone color and sensitivity adjustments feed back into touch detection."
+              width="1760"
+              height="1268"
+              loading="lazy"
+              decoding="async">
+          </figure>
+        </div>
+
+        <div class="project-section" id="next-steps">
+          <h2>Next Steps</h2>
+          <p>
+            Tactone is currently a working touch-to-sound prototype that detects the duration of each
+            touch. The next iteration will respond to the strength of touch and return it as haptic
+            feedback. I plan to replace the microcontroller’s built-in touch inputs with a dedicated
+            capacitive sensing board and to add a small actuator coupled to the clay. A later stage
+            would move the electrodes from copper tape to a custom flexible circuit fitted inside the
+            vessel wall. I also plan to test alternative vessel forms and contact arrangements to see
+            how they change the way people approach and play the instrument.
+          </p>
+        </div>
+
+        <div class="project-section" id="process">
+          <h2>Process</h2>
+          <figure class="process-video-figure">
+            <div class="project-visual visual-auto process-video">
+              <video
+                class="autoplay-loop user-pausable-autoplay"
+                autoplay
+                muted
+                loop
+                playsinline
+                controls
+                preload="metadata"
+                poster="../assets/videos/tactone/ceramic-process-poster.jpg"
+                aria-label="Ceramic vessel making process">
+                <source src="../assets/videos/tactone/ceramic-process.mp4" type="video/mp4">
+              </video>
+            </div>
+            <figcaption>Coil-building and shaping the Tactone ceramic vessel.</figcaption>
+          </figure>
+        </div>
+      </section>
+    </div>
+
+    <nav class="related-projects next-project" aria-label="Next project">
+      <a href="the-roro.html" class="related-card next-project-link">
+        <div>
+          <span class="related-card-title">Quadruped</span>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 5v14m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <p class="next-project-hint" hidden>Keep scrolling to continue</p>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Yueyi Lulu Wang</span>
+      <div class="footer-links">
+        <a href="mailto:lulu.yueyi.wang@gmail.com">Email</a>
+        <a href="https://github.com/luluwangyy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=tactone-process-video-2"></script>
+  <script src="../js/next-project.js" defer></script>
+</body>
+</html>

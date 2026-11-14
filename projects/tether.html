@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0c0f">
+  <title>Tether — Yueyi Lulu Wang</title>
+  <meta name="description" content="Tether: a wearable, 8-degree-of-freedom robotic mechanism exploring the tactile relationship between humans and embodied machines.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Averia+Serif+Libre:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css?v=next-project-arrow">
+</head>
+<body class="make-project make-project--indexed">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="nav-morph">
+        <button type="button" class="nav-morph__trigger" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="nav-morph__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <nav class="segmented-control" aria-label="Primary" id="primary-nav">
+          <span class="segmented-control__pill" aria-hidden="true"></span>
+          <a href="../index.html" class="segmented-control__item">Home</a>
+          <a href="../make.html" class="segmented-control__item">Make</a>
+          <a href="../work.html" class="segmented-control__item">Work</a>
+          <a href="../play.html" class="segmented-control__item">Play</a>
+          <a href="../about.html" class="segmented-control__item">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="project-detail-visual">
+      <div class="project-visual">
+        <img src="../assets/images/tether/cover.jpg" alt="Tether" loading="lazy">
+      </div>
+    </div>
+
+    <section class="project-detail-hero">
+      <a href="../make.html" class="back-link">&larr; Back to Make</a>
+      <h1>Tether</h1>
+      <p class="project-subtitle">A remotely actuated robotic wearable investigating how a mechanical embrace mediates care, discomfort, and bodily agency across distance.</p>
+
+      <dl class="project-meta project-meta--horizontal" aria-label="Project details">
+        <div>
+          <dt class="meta-label">Type</dt>
+          <dd class="meta-value">Wearable, Robotics, Interactive Prototype</dd>
+        </div>
+        <div>
+          <dt class="meta-label">Role</dt>
+          <dd class="meta-value">Creative Technologist &amp; Interaction Designer</dd>
+        </div>
+        <div>
+          <dt class="meta-label">Duration</dt>
+          <dd class="meta-value">2025</dd>
+        </div>
+        <div>
+          <dt class="meta-label">Tools</dt>
+          <dd class="meta-value">Raspberry Pi · Microcontroller · Servo Motors · Wood Fabrication · Silkscreen Printing · Custom Software</dd>
+        </div>
+      </dl>
+    </section>
+
+    <div class="project-detail-split">
+      <nav class="project-toc" aria-label="On this page">
+        <p class="project-toc__label">Contents</p>
+        <ul class="project-toc__list">
+          <li><a class="project-toc__link" href="#overview">Overview</a></li>
+          <li><a class="project-toc__link" href="#system-mechanism">Technical Workflow</a></li>
+          <li><a class="project-toc__link" href="#demo-videos">Demo Videos</a></li>
+        </ul>
+      </nav>
+
+      <section class="project-detail-body">
+      <div class="project-section" id="overview">
+      <h2>Overview</h2>
+      <p>
+        How might a wearable robot translate a loved one’s remote gesture into a felt sense of
+        presence?
+      </p>
+      <p>
+        This project grew from my experience living across continents, separated from my family
+        by geography and time zones. The neck pillow I carried on repeated journeys of more than
+        twenty hours became a starting point: an intimate object that supports the body while
+        accompanying the experience of distance.
+      </p>
+      <p>
+        Louise Bourgeois’s <em>Maman</em> influenced the wearable’s form. I was drawn to how its
+        spider-like body suggests both maternal protection and unease. Its enveloping structure
+        informed Tether’s articulated wooden limbs. Worn around the neck, they bring this tension
+        close to the body: an enclosing movement might resemble an embrace, while also making the
+        wearer aware that someone else has initiated the contact.
+      </p>
+      </div>
+
+      <figure class="project-reference">
+        <a href="https://blog.artsper.com/en/a-closer-look/3826/" target="_blank" rel="noopener">
+          <img src="../assets/images/tether/maman-reference.png" alt="Louise Bourgeois’s Maman sculpture installed outside Tate Modern" loading="lazy">
+        </a>
+        <figcaption><em>Maman</em>, bronze, 1999. <a href="https://blog.artsper.com/en/a-closer-look/3826/" target="_blank" rel="noopener">Reference: Artsper ↗</a></figcaption>
+      </figure>
+      <p>
+        I developed an eight-degree-of-freedom mechanism using servo motors, handcrafted wooden
+        components, fabric, and custom software. Its limbs contract and extend around the neck. I
+        explored two ways for my mother to activate it:
+      </p>
+
+      <div class="interaction-table-wrap">
+        <table class="interaction-table">
+          <thead>
+            <tr>
+              <th>Interaction</th>
+              <th>Robotic response</th>
+              <th>Question it opens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>She presses “dance”/ “hug” on a remote interface.</td>
+              <td>The wearable performs a choreographed movement sequence.</td>
+              <td>What does she intend to communicate by choosing when to send a movement?</td>
+            </tr>
+            <tr>
+              <td>The system detects her smile.</td>
+              <td>The wearable performs a tickling movement.</td>
+              <td>How does linking an expression to touch affect the experience of giving and receiving it?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p>
+        <strong>Dimensions:</strong> 23.6 × 5.9 × 4.7 inches when extended; dimensions vary during
+        contraction.
+      </p>
+
+      <section class="project-section" id="system-mechanism" aria-labelledby="tether-workflow-title">
+        <h2 id="tether-workflow-title">Technical Workflow</h2>
+        <figure class="editorial-figure">
+          <img
+            src="../assets/images/tether/technical-workflow.jpg"
+            alt="Tether technical workflow: remote dance or hug buttons and smile input trigger custom software, a Raspberry Pi coordinates eight-axis servo motion, the wearable's articulated limbs contract at the neck, and the wearer's response informs a co-design loop."
+            width="1280"
+            height="960"
+            style="width: 100%; height: auto;"
+            loading="lazy"
+            decoding="async">
+        </figure>
+      </section>
+
+      <div class="project-section" id="demo-videos">
+        <h2>Demo Videos</h2>
+        <div class="media-columns media-columns--single">
+          <div class="media-column">
+            <div class="project-visual">
+              <button type="button" class="video-facade" style="background-image:url('https://i.vimeocdn.com/video/2086793090-70aa05b28735ca313f3549314b728fbe3db776114ab200a019ba6b464b059334-d_1280?region=us')" data-embed-src="https://player.vimeo.com/video/1139940522?title=0&amp;byline=0&amp;portrait=0&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1" data-embed-title="Tether — Final Demo" data-embed-allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share" data-embed-referrer="strict-origin-when-cross-origin" aria-label="Play video: Tether Final Demo">
+                <span class="video-facade-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+              </button>
+            </div>
+            <p class="media-caption">Final demo.</p>
+          </div>
+          <div class="media-column">
+            <div class="project-visual">
+              <button type="button" class="video-facade" style="background-image:url('https://img.youtube.com/vi/6nwm09wMDPs/hqdefault.jpg')" data-embed-src="https://www.youtube.com/embed/6nwm09wMDPs?autoplay=1&amp;rel=0" data-embed-title="Tether — First Iteration" data-embed-allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" aria-label="Play video: Tether First Iteration">
+                <span class="video-facade-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+              </button>
+            </div>
+            <p class="media-caption">First iteration.</p>
+          </div>
+        </div>
+      </div>
+
+      </section>
+    </div>
+
+    <nav class="related-projects next-project" aria-label="Next project">
+      <a href="tactone.html" class="related-card next-project-link">
+        <div>
+          <span class="related-card-title">Tactone</span>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 5v14m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <p class="next-project-hint" hidden>Keep scrolling to continue</p>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Yueyi Lulu Wang</span>
+      <div class="footer-links">
+        <a href="mailto:lulu.yueyi.wang@gmail.com">Email</a>
+        <a href="https://github.com/luluwangyy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=make-indexed-layout-1"></script>
+  <script src="../js/next-project.js" defer></script>
+</body>
+</html>

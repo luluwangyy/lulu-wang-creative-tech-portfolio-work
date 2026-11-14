@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowcode — Yueyi Lulu Wang</title>
+  <meta name="description" content="Flowcode turns AI-generated creative code into an interactive map, helping beginners understand its structure, behavior, and visual output.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Averia+Serif+Libre:ital,wght@0,300;1,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/style.css?v=next-project-arrow">
+</head>
+<body class="case-study sketchtrace-case">
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="nav-morph">
+        <button type="button" class="nav-morph__trigger" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav">
+          <svg class="nav-morph__icon" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M3 6h14M3 10h14M3 14h14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </button>
+        <nav class="segmented-control" aria-label="Primary" id="primary-nav">
+          <span class="segmented-control__pill" aria-hidden="true"></span>
+          <a href="../index.html" class="segmented-control__item">Home</a>
+          <a href="../make.html" class="segmented-control__item">Make</a>
+          <a href="../work.html" class="segmented-control__item">Work</a>
+          <a href="../play.html" class="segmented-control__item">Play</a>
+          <a href="../about.html" class="segmented-control__item">About</a>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="case-mobile-nav">
+      <button class="case-mobile-nav__trigger" type="button" aria-label="Open section navigation" aria-expanded="false" aria-controls="case-mobile-menu">
+        <span class="case-mobile-nav__index" aria-hidden="true">01</span>
+      </button>
+      <nav class="case-mobile-nav__menu" id="case-mobile-menu" aria-label="Case study sections">
+        <a class="is-active" href="#overview" aria-current="true"><span>01</span> Overview</a>
+        <a href="#context"><span>02</span> Project Context</a>
+        <a href="#artifact"><span>03</span> Final Artifact</a>
+        <a href="#moments"><span>04</span> Key Design Moments</a>
+        <a href="#impact"><span>05</span> Prototype Status</a>
+        <a href="#reflection"><span>06</span> Reflection</a>
+      </nav>
+    </div>
+
+    <div class="case-layout">
+      <aside class="case-rail" aria-label="Flowcode case study navigation">
+        <div class="case-rail__sticky">
+          <a href="../work.html" class="case-back-link">← Back to Work</a>
+
+          <p class="case-rail__eyebrow">In this case study</p>
+          <nav class="case-nav" aria-label="On this page">
+            <a class="case-nav__link is-active" href="#overview" aria-current="true">Overview</a>
+            <a class="case-nav__link" href="#context">Project Context</a>
+            <a class="case-nav__link" href="#artifact">Final Artifact</a>
+            <a class="case-nav__link" href="#moments">Key Design Moments</a>
+            <a class="case-nav__link" href="#impact">Prototype Status</a>
+            <a class="case-nav__link" href="#reflection">Reflection</a>
+          </nav>
+
+          <div class="case-rail__actions" aria-label="Project links">
+            <a href="https://luluwangyy.github.io/final-dti-flowchart/" target="_blank" rel="noopener">Try Live Demo ↗</a>
+            <a href="https://github.com/luluwangyy/final-dti-flowchart/tree/codex/live-demo-release" target="_blank" rel="noopener">View GitHub ↗</a>
+          </div>
+
+          <dl class="case-rail__meta">
+            <div>
+              <dt>Role</dt>
+              <dd>Early research and prototyping; independent redesign and development</dd>
+            </div>
+            <div>
+              <dt>Skills</dt>
+              <dd>Literature review · sketching · code prototyping · interface design · React · LLM integration</dd>
+            </div>
+            <div>
+              <dt>Lab</dt>
+              <dd>Barnard Design Tools Lab</dd>
+            </div>
+            <div>
+              <dt>Guidance</dt>
+              <dd>Professor Tiffany Tseng</dd>
+            </div>
+            <div>
+              <dt>Time</dt>
+              <dd>Sep. 2024 to Jan. 2025 (lab phase)<br>2026 to present (independent revision)</dd>
+            </div>
+            <div>
+              <dt>Platform</dt>
+              <dd>Responsive web</dd>
+            </div>
+          </dl>
+        </div>
+      </aside>
+
+      <article class="case-story">
+        <section class="case-section case-overview" id="overview" aria-labelledby="overview-label">
+          <figure class="case-front-image">
+            <img src="../assets/images/sketchtrace/cover.jpg" alt="Flowcode interface with code, a live creative-coding preview, and an interactive structural map">
+          </figure>
+          <h1>Flowcode</h1>
+          <p class="case-kicker" id="overview-label">Overview</p>
+          <p class="case-statement case-statement--hero">
+            Flowcode is an <span class="case-accent">LLM-assisted interface</span> that connects creative code with an interactive structural flowchart and live visual output. I joined the project at the Barnard Design Tools Lab under the guidance of Professor Tiffany Tseng. From September 2024 to January 2025, I contributed to the initial literature review, early sketches, and exploratory code prototypes. In 2026, I independently revisited the low-fidelity prototype and developed the high-fidelity web version shown here.
+          </p>
+
+          <div class="case-role" aria-labelledby="role-title">
+            <p class="case-kicker" id="role-title">Project History and My Role</p>
+            <p class="case-role__summary">I worked on Flowcode in two phases. During the lab phase, I contributed to the initial research, interface sketches, and exploratory code prototypes under Professor Tseng's guidance. Beginning in 2026, I independently revised the project, redesigning and implementing the current interface from the earlier low-fidelity prototype.</p>
+            <dl>
+              <div>
+                <dt>Lab phase, Sep. 2024 to Jan. 2025</dt>
+                <dd>Relevant literature review · early sketches · exploratory code prototypes</dd>
+              </div>
+              <div>
+                <dt>Independent revision, 2026 to present</dt>
+                <dd>Interaction design · interface redesign · high-fidelity prototyping</dd>
+              </div>
+              <div>
+                <dt>Current implementation</dt>
+                <dd>React · CodeMirror · LLM integration · responsive web development</dd>
+              </div>
+              <div>
+                <dt>Delivery</dt>
+                <dd>Testing · deployment · GitHub</dd>
+              </div>
+            </dl>
+          </div>
+        </section>
+
+        <section class="case-section" id="context" aria-labelledby="context-label">
+          <p class="case-kicker" id="context-label">Project Context</p>
+          <p class="case-statement">
+            Creative coding is becoming easier to <span class="case-accent">generate</span>, but not necessarily easier to <span class="case-highlight-2">understand</span>.
+          </p>
+
+          <div class="case-short-copy">
+            <p>For beginners learning tools like <strong>Three.js and WebGL</strong>, even a relatively small project can contain unfamiliar functions, parameters, and relationships.</p>
+            <p>AI-assisted coding can produce a working project in seconds. It can also leave learners with code that works before they understand why.</p>
+          </div>
+
+          <p class="case-bridge-copy case-lab-prompt">At the Barnard Design Tools Lab, the project explored how AI might help beginners understand the structure of generated creative code. Under Professor Tiffany Tseng's guidance, I contributed to the initial literature review, early sketches, and code prototypes.</p>
+          <p class="case-bridge-copy">The early research considered flowcharts as one way to make program structure visible while keeping the underlying code accessible.</p>
+
+          <div class="representation-map case-reveal" aria-label="Three connected representations of a creative coding project">
+            <div class="representation-map__item">
+              <span>01</span>
+              <strong>Source Code</strong>
+              <small>What it is</small>
+            </div>
+            <span class="representation-map__connector" aria-hidden="true">→</span>
+            <div class="representation-map__item representation-map__item--accent">
+              <span>02</span>
+              <strong>Structural Flowchart</strong>
+              <small>How it works</small>
+            </div>
+            <span class="representation-map__connector" aria-hidden="true">→</span>
+            <div class="representation-map__item">
+              <span>03</span>
+              <strong>Live Visual Output</strong>
+              <small>What it makes</small>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="artifact" aria-labelledby="artifact-label">
+          <p class="case-kicker" id="artifact-label">Final Artifact</p>
+
+          <figure class="case-product-video">
+            <video class="autoplay-loop" autoplay muted loop controls playsinline preload="auto" poster="../assets/images/sketchtrace/hero.jpg">
+              <source src="../assets/videos/sketchtrace/demo_new.mp4" type="video/mp4">
+            </video>
+            <figcaption>Full product walkthrough · 00:38</figcaption>
+          </figure>
+
+          <div class="artifact-views" aria-label="Three synchronized product views">
+            <article class="artifact-view">
+              <span class="artifact-view__number">01</span>
+              <h2>Code</h2>
+              <p>A CodeMirror editor keeps the source available and highlights relevant ranges as learners navigate.</p>
+            </article>
+            <article class="artifact-view">
+              <span class="artifact-view__number">02</span>
+              <h2>Live Preview</h2>
+              <p>The rendered output ties abstract program logic to the visual behavior it produces.</p>
+            </article>
+            <article class="artifact-view">
+              <span class="artifact-view__number">03</span>
+              <h2>Interactive Flowchart</h2>
+              <p>An LLM maps essential systems into nodes that link directly back to the code.</p>
+            </article>
+          </div>
+
+          <div class="case-sequence case-reveal" aria-label="Product learning sequence">
+            <span>See the structure</span>
+            <span>inspect the code</span>
+            <span>observe what it produces.</span>
+          </div>
+
+        </section>
+
+        <section class="case-section case-moments" id="moments" aria-labelledby="moments-label">
+          <p class="case-kicker" id="moments-label">Key Design Moments</p>
+
+          <article class="design-moment design-moment--gallery">
+            <header class="design-moment__header">
+              <span>01</span>
+              <h2>Choosing examples that actually stress-tested the system</h2>
+            </header>
+            <div class="decision-path" aria-label="Problem, evidence, decision, and result">
+              <p><span>Problem</span> Simple UI examples did not show why structural visualization mattered.</p>
+              <p><span>Decision</span> Build four visually and structurally different creative-coding studies.</p>
+              <p><span>Result</span> The examples became both learning content and product stress tests.</p>
+            </div>
+
+            <div class="study-gallery">
+              <figure class="study-preview">
+                <iframe src="../assets/animations/sketchtrace/particle-terrain.html" title="Three.js Particle Terrain" loading="lazy"></iframe>
+                <figcaption><span>01</span> Particle Terrain</figcaption>
+              </figure>
+              <figure class="study-preview">
+                <iframe src="../assets/animations/sketchtrace/kinetic-lili-grid.html" title="Kinetic Typographic Grid" loading="lazy"></iframe>
+                <figcaption><span>02</span> Kinetic Type Grid</figcaption>
+              </figure>
+              <figure class="study-preview">
+                <iframe src="../assets/animations/sketchtrace/recursive-wind-garden.html" title="Recursive Wind Garden" loading="lazy"></iframe>
+                <figcaption><span>03</span> Recursive Wind Garden</figcaption>
+              </figure>
+              <figure class="study-preview">
+                <iframe src="../assets/animations/sketchtrace/boid-constellation.html" title="Boid Constellation Simulation" loading="lazy"></iframe>
+                <figcaption><span>04</span> Boid Constellation</figcaption>
+              </figure>
+            </div>
+          </article>
+
+          <article class="design-moment design-moment--comparison">
+            <header class="design-moment__header">
+              <span>02</span>
+              <h2>Shrinking complexity without hiding the code</h2>
+            </header>
+
+            <div class="case-short-copy">
+              <p>The early low-fidelity flowcharts represented nearly every meaningful function and relationship. They were comprehensive but overwhelming for a beginner.</p>
+              <p>During the 2026 independent revision, I simplified the prompt strategy and information hierarchy so that each view focused on roughly <span class="case-accent">11 to 13 essential nodes</span>.</p>
+            </div>
+
+            <div class="case-compare" style="--compare: 50%;">
+              <div class="case-compare__stage">
+                <img class="case-compare__before" src="../assets/images/sketchtrace/overlycomplicated.jpg" alt="Early flowchart with many dense nodes and relationships">
+                <img class="case-compare__after" src="../assets/images/sketchtrace/simple.jpg" alt="Simplified final flowchart with approximately 11 to 13 essential nodes">
+                <span class="case-compare__divider" aria-hidden="true"></span>
+                <span class="case-compare__label case-compare__label--before">Comprehensive</span>
+                <span class="case-compare__label case-compare__label--after">Curated</span>
+              </div>
+              <label class="case-compare__control">
+                <span>Drag to compare</span>
+                <input type="range" min="0" max="100" value="50" aria-label="Compare the comprehensive and curated flowcharts">
+              </label>
+            </div>
+
+            <p class="case-bridge-copy">The flowchart stopped trying to reproduce the entire program. It became an entry point: enough structure to orient a learner, with the source always available for depth.</p>
+
+            <div class="question-shift case-reveal">
+              <p><span>The question shifted from</span> “How do I visualize all of this code?”</p>
+              <span class="question-shift__arrow" aria-hidden="true">→</span>
+              <p><span>to</span> “What does a beginner need to see first?”</p>
+            </div>
+          </article>
+
+          <article class="design-moment design-moment--interface">
+            <header class="design-moment__header">
+              <span>03</span>
+              <h2>Making three representations feel like one interface</h2>
+            </header>
+
+            <div class="interface-decision">
+              <figure>
+                <img src="../assets/images/sketchtrace/hero.jpg" alt="Flowcode showing code and a structural flowchart beside a persistent live preview" loading="lazy">
+                <figcaption>Resizable panels preserve all three views while letting the learner decide what needs focus.</figcaption>
+              </figure>
+              <div class="interface-decision__copy">
+                <p><span>Constraint</span> Equal space crowded the screen; separate screens weakened the relationships.</p>
+                <p><span>Decision</span> Place code and flowchart side by side—the strongest direct relationship—and keep the live preview continuously visible.</p>
+                <p><span>Interaction</span> Selecting a node points to its exact code while resizing changes emphasis without breaking context.</p>
+              </div>
+            </div>
+
+            <p class="case-statement case-statement--closing">The three panels stay visible together so learners can compare structure, source code, and visual output without losing context.</p>
+          </article>
+        </section>
+
+        <section class="case-section" id="impact" aria-labelledby="impact-label">
+          <p class="case-kicker" id="impact-label">Prototype Status</p>
+          <div class="impact-metrics">
+            <div>
+              <strong>100+</strong>
+              <span>creative-coding studies</span>
+            </div>
+            <div>
+              <strong>11–13</strong>
+              <span>essential nodes per flowchart</span>
+            </div>
+            <div>
+              <strong>~2 sec</strong>
+              <span>creative-code rendering</span>
+            </div>
+            <div>
+              <strong>~2–3 sec</strong>
+              <span>structural representation</span>
+            </div>
+          </div>
+
+          <div class="case-short-copy">
+            <p>In the 2026 independent revision, I developed the earlier low-fidelity prototype into the working, responsive web prototype shown here.</p>
+            <p>I focused on reducing dense generated flowcharts to a navigable set of essential nodes while preserving direct links to the underlying code.</p>
+          </div>
+
+          <div class="impact-ending">
+            <p>The current prototype tests how AI can expose the <span class="case-accent">structure behind generated code</span> while keeping the source available for inspection.</p>
+            <div class="impact-actions">
+              <a href="https://luluwangyy.github.io/final-dti-flowchart/" target="_blank" rel="noopener">Try Live Demo ↗</a>
+              <a href="https://github.com/luluwangyy/final-dti-flowchart/tree/codex/live-demo-release" target="_blank" rel="noopener">View GitHub ↗</a>
+            </div>
+          </div>
+        </section>
+
+        <section class="case-section" id="reflection" aria-labelledby="reflection-label">
+          <p class="case-kicker" id="reflection-label">Reflection</p>
+          <p class="case-statement case-statement--reflection">Helping beginners requires choosing what to show first and tying abstract structure to something they can inspect.</p>
+
+          <div class="case-short-copy">
+            <p>For Flowcode, that meant giving learners several ways to understand the same program: its structure, the code behind it, and the visual result it creates.</p>
+            <p>The same interaction model could also support other dense materials, such as academic readings.</p>
+          </div>
+
+          <div class="future-map case-reveal" aria-label="A possible future interaction model for academic reading">
+            <span>Long Reading</span>
+            <i aria-hidden="true">→</i>
+            <span>Structural Map</span>
+            <i aria-hidden="true">→</i>
+            <span>Click Node</span>
+            <i aria-hidden="true">→</i>
+            <span>Original Passage</span>
+          </div>
+
+          <p class="case-final-statement">I am interested in how AI can give people an entry point into difficult material while keeping the original material available.</p>
+        </section>
+      </article>
+    </div>
+
+    <nav class="related-projects next-project" aria-label="Next project">
+      <a href="nomi.html" class="related-card next-project-link">
+        <div>
+          <span class="related-card-title">Nomi</span>
+        </div>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 5v14m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+      <p class="next-project-hint" hidden>Keep scrolling to continue</p>
+    </nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>© 2026 Yueyi Lulu Wang</span>
+      <div class="footer-links">
+        <a href="mailto:lulu.yueyi.wang@gmail.com">Email</a>
+        <a href="https://github.com/luluwangyy" target="_blank" rel="noopener">GitHub</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js?v=media-autoplay-1"></script>
+  <script src="../js/next-project.js" defer></script>
+</body>
+</html>
