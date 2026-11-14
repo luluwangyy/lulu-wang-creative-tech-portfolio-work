@@ -108,9 +108,9 @@
         <ul class="project-toc__list">
           <li><a class="project-toc__link" href="#overview">Overview</a></li>
           <li><a class="project-toc__link" href="#design">Circuit &amp; PCB Design</a></li>
-          <li><a class="project-toc__link" href="#stack">Specifications &amp; BOM</a></li>
           <li><a class="project-toc__link" href="#fabrication">Reproduction Steps</a></li>
           <li><a class="project-toc__link" href="#reflection">Lessons &amp; Improvements</a></li>
+          <li><a class="project-toc__link" href="#stack">Specifications &amp; BOM</a></li>
         </ul>
       </nav>
       <article class="project-detail-body">
@@ -130,22 +130,6 @@
             <a href="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/kicad-design-screenshot.png"><img src="https://raw.githubusercontent.com/luluwangyy/creative-embedded-system-pcb/main/asset/kicad-design-screenshot.png" loading="lazy" alt="KiCad board layout showing the duck outline, copper routes, and component pads"></a>
             <figcaption>KiCad layout showing the board outline and component placement.</figcaption>
           </figure>
-        </section>
-        <section class="project-section" id="stack">
-          <h2>Technical Specifications &amp; Bill of Materials</h2>
-          <p>Low-power CMOS 555 oscillator with coin-cell power and a single 5 mm red LED, fabricated on CNC-milled copper-clad stock. The design files include the KiCad schematic and board, Gerber layers, and plated and non-plated drill exports.</p>
-          <div class="pcb-bom">
-            <table>
-              <thead><tr><th scope="col">Component</th><th scope="col">Specification</th><th scope="col">Qty</th></tr></thead>
-              <tbody>
-                <tr><th scope="row">U1</th><td>TL555 CMOS timer</td><td>1</td></tr>
-                <tr><th scope="row">LED1</th><td>5 mm red LED</td><td>1</td></tr>
-                <tr><th scope="row">R1, R2</th><td>Timing resistors, 1–100 kΩ design range</td><td>2</td></tr>
-                <tr><th scope="row">C1</th><td>10 µF timing capacitor</td><td>1</td></tr>
-                <tr><th scope="row">Battery holder</th><td>Rear-mounted CR2032-style SMT holder</td><td>1</td></tr>
-              </tbody>
-            </table>
-          </div>
         </section>
         <section class="project-section" id="fabrication">
           <h2>Reproduction Steps</h2>
@@ -176,6 +160,22 @@
           <p>I placed a milling tab near the bill. Removing it meant filing right against the smallest curves on the board. On the next revision, I’d move the tabs to the flatter back or bottom edge so I can remove them without reshaping the bill.</p>
           <div class="link-button-row">
             <a class="link-button" href="https://github.com/luluwangyy/creative-embedded-system-pcb">View KiCad and fabrication files on GitHub ↗</a>
+          </div>
+        </section>
+        <section class="project-section" id="stack">
+          <h2>Technical Specifications &amp; Bill of Materials</h2>
+          <p>Low-power CMOS 555 oscillator with coin-cell power and a single 5 mm red LED, fabricated on CNC-milled copper-clad stock. The design files include the KiCad schematic and board, Gerber layers, and plated and non-plated drill exports.</p>
+          <div class="pcb-bom">
+            <table>
+              <thead><tr><th scope="col">Component</th><th scope="col">Specification</th><th scope="col">Qty</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">U1</th><td>TL555 CMOS timer</td><td>1</td></tr>
+                <tr><th scope="row">LED1</th><td>5 mm red LED</td><td>1</td></tr>
+                <tr><th scope="row">R1, R2</th><td>Timing resistors, 1–100 kΩ design range</td><td>2</td></tr>
+                <tr><th scope="row">C1</th><td>10 µF timing capacitor</td><td>1</td></tr>
+                <tr><th scope="row">Battery holder</th><td>Rear-mounted CR2032-style SMT holder</td><td>1</td></tr>
+              </tbody>
+            </table>
           </div>
         </section>
       </article>
